@@ -1,0 +1,1336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Wireless Headphones - E-Commerce Product Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        header nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        header a {
+            color: #2c3e50;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        header a:hover {
+            color: #3498db;
+        }
+
+        .product-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        /* Image Gallery Section */
+        .product-viewer {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .main-image-container {
+            width: 100%;
+            height: 450px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .main-image {
+            font-size: 150px;
+            animation: float 3s ease-in-out infinite;
+            filter: drop-shadow(0 10px 30px rgba(0,0,0,0.2));
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .image-counter {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .nav-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 45px;
+            height: 45px;
+            background: rgba(255,255,255,0.9);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: #2c3e50;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+
+        .nav-arrow:hover {
+            background: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .nav-arrow.prev {
+            left: 15px;
+        }
+
+        .nav-arrow.next {
+            right: 15px;
+        }
+
+        .thumbnail-gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        .thumbnail {
+            width: 100%;
+            aspect-ratio: 1;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+            border: 3px solid #ddd;
+            border-radius: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .thumbnail:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+        }
+
+        .thumbnail.active {
+            border-color: #3498db;
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            box-shadow: inset 0 0 15px rgba(52, 152, 219, 0.3);
+        }
+
+        .thumbnail::after {
+            content: '✓';
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background: #27ae60;
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .thumbnail.active::after {
+            opacity: 1;
+        }
+
+        .product-badges {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 8px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .badge-hot {
+            background: #ffe5e5;
+            color: #e74c3c;
+        }
+
+        .badge-popular {
+            background: #fff3e0;
+            color: #e67e22;
+        }
+
+        .badge-new {
+            background: #e3f2fd;
+            color: #2196f3;
+        }
+
+        /* Product Details Section */
+        .product-details {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .product-title {
+            font-size: 32px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .rating-section {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .stars {
+            display: flex;
+            gap: 5px;
+            font-size: 20px;
+        }
+
+        .star {
+            color: #ffc107;
+        }
+
+        .rating-text {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .price-section {
+            border-top: 2px solid #eee;
+            border-bottom: 2px solid #eee;
+            padding: 15px 0;
+        }
+
+        .price {
+            font-size: 36px;
+            font-weight: bold;
+            color: #e74c3c;
+            margin-bottom: 5px;
+        }
+
+        .original-price {
+            text-decoration: line-through;
+            color: #999;
+            font-size: 18px;
+            margin-right: 10px;
+        }
+
+        .discount {
+            background: #e74c3c;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .description {
+            color: #555;
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        .features {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .features h4 {
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .features li {
+            list-style: none;
+            padding-left: 20px;
+            margin-bottom: 8px;
+            position: relative;
+        }
+
+        .features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #27ae60;
+            font-weight: bold;
+        }
+
+        .product-options {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .option-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .option-group label {
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 14px;
+        }
+
+        .option-values {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .option-value {
+            padding: 8px 15px;
+            border: 2px solid #ddd;
+            background: white;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .option-value:hover {
+            border-color: #3498db;
+        }
+
+        .option-value.selected {
+            background: #3498db;
+            color: white;
+            border-color: #3498db;
+        }
+
+        .quantity-selector {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            width: fit-content;
+        }
+
+        .qty-btn {
+            width: 40px;
+            height: 40px;
+            border: 2px solid #ddd;
+            background: white;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 18px;
+            transition: all 0.3s ease;
+        }
+
+        .qty-btn:hover {
+            border-color: #3498db;
+            color: #3498db;
+        }
+
+        .qty-input {
+            width: 60px;
+            text-align: center;
+            border: 2px solid #ddd;
+            padding: 8px;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 15px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: #3498db;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+        }
+
+        .btn-secondary {
+            background: #f8f9fa;
+            color: #3498db;
+            border: 2px solid #3498db;
+        }
+
+        .btn-secondary:hover {
+            background: #3498db;
+            color: white;
+        }
+
+        /* Reviews Section */
+        .reviews-section {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-top: 30px;
+        }
+
+        .reviews-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #eee;
+        }
+
+        .reviews-title {
+            font-size: 28px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .review-summary {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .average-rating {
+            text-align: center;
+        }
+
+        .average-rating .number {
+            font-size: 36px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .average-rating .stars {
+            margin: 5px 0;
+        }
+
+        .review-total {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .rating-bars {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .rating-bar {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .rating-bar .stars {
+            width: 100px;
+            font-size: 16px;
+        }
+
+        .bar {
+            flex: 1;
+            height: 8px;
+            background: #e0e0e0;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .bar-fill {
+            height: 100%;
+            background: #ffc107;
+            border-radius: 4px;
+        }
+
+        .bar-count {
+            width: 50px;
+            text-align: right;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .write-review-btn {
+            background: #27ae60;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .write-review-btn:hover {
+            background: #229954;
+        }
+
+        .review-item {
+            border-bottom: 1px solid #eee;
+            padding: 20px 0;
+        }
+
+        .review-item:last-child {
+            border-bottom: none;
+        }
+
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 10px;
+        }
+
+        .reviewer-name {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .review-date {
+            color: #999;
+            font-size: 14px;
+        }
+
+        .review-rating {
+            display: flex;
+            gap: 5px;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .review-title {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+
+        .review-text {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .review-helpful {
+            display: flex;
+            gap: 15px;
+            font-size: 14px;
+        }
+
+        .helpful-btn {
+            background: none;
+            border: none;
+            color: #3498db;
+            cursor: pointer;
+            padding: 0;
+            font-size: 14px;
+        }
+
+        .helpful-btn:hover {
+            text-decoration: underline;
+        }
+
+        .filter-section {
+            margin-bottom: 30px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .filter-label {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .filter-btn {
+            padding: 8px 16px;
+            border: 2px solid #ddd;
+            background: white;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 14px;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            border-color: #3498db;
+            background: #3498db;
+            color: white;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 30px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 500px;
+            max-height: 80vh;
+            overflow-y: auto;
+            animation: slideDown 0.3s ease;
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .close-btn {
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            color: #aaa;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        .close-btn:hover {
+            color: #000;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            font-family: inherit;
+            font-size: 14px;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #3498db;
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+        }
+
+        .star-rating {
+            display: flex;
+            gap: 10px;
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .star-rating .star {
+            cursor: pointer;
+            color: #ddd;
+            transition: all 0.2s ease;
+        }
+
+        .star-rating .star:hover,
+        .star-rating .star.active {
+            color: #ffc107;
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 768px) {
+            .product-container {
+                grid-template-columns: 1fr;
+                padding: 20px;
+                gap: 30px;
+            }
+
+            .action-buttons {
+                flex-direction: column;
+            }
+
+            .review-summary {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .reviews-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            header nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .product-title {
+                font-size: 24px;
+            }
+
+            .price {
+                font-size: 28px;
+            }
+        }
+
+        .success-message {
+            display: none;
+            background: #27ae60;
+            color: white;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            animation: slideInDown 0.3s ease;
+        }
+
+        @keyframes slideInDown {
+            from {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .success-message.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">🛒 ShopHub</div>
+            <div>
+                <a href="#">Home</a>
+                <a href="#">Products</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </div>
+            <div>
+                <a href="#">Cart (0)</a>
+                <a href="#">Account</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="success-message" id="successMessage">
+            ✓ Item added to cart successfully!
+        </div>
+
+        <div class="product-container">
+            <!-- Product Gallery -->
+            <div class="product-viewer">
+                <div class="main-image-container" id="mainImageContainer">
+                    <div class="main-image" id="mainImage">🎧</div>
+                    <span class="image-counter"><span id="currentImage">1</span> / <span id="totalImages">4</span></span>
+                    <button class="nav-arrow prev" onclick="previousImage()">❮</button>
+                    <button class="nav-arrow next" onclick="nextImage()">❯</button>
+                </div>
+
+                <div class="thumbnail-gallery" id="thumbnailGallery">
+                    <!-- Thumbnails will be generated by JS -->
+                </div>
+
+                <div class="product-badges">
+                    <span class="badge badge-hot">🔥 Hot Deal</span>
+                    <span class="badge badge-popular">⭐ Best Seller</span>
+                    <span class="badge badge-new">✨ Premium Quality</span>
+                </div>
+            </div>
+
+            <!-- Product Details -->
+            <div class="product-details">
+                <h1 class="product-title">Premium Wireless Headphones Pro</h1>
+
+                <div class="rating-section">
+                    <div class="stars">
+                        <span class="star">★★★★★</span>
+                    </div>
+                    <span class="rating-text">4.8/5 (324 reviews)</span>
+                </div>
+
+                <div style="background: #e8f4f8; padding: 12px; border-radius: 6px; color: #0277bd; font-size: 14px;">
+                    ⚡ 50% OFF - Limited Time Offer!
+                </div>
+
+                <div class="price-section">
+                    <div>
+                        <span class="original-price">$199.99</span>
+                        <span class="price">$99.99</span>
+                        <span class="discount">-50%</span>
+                    </div>
+                </div>
+
+                <p class="description">
+                    Experience premium audio quality with our flagship wireless headphones. Featuring active noise cancellation, 30-hour battery life, and premium comfort design. Perfect for music lovers, professionals, and everyday use.
+                </p>
+
+                <div class="features">
+                    <h4>✨ Key Features</h4>
+                    <ul>
+                        <li>Active Noise Cancellation (ANC)</li>
+                        <li>30-Hour Battery Life</li>
+                        <li>Premium Build Quality</li>
+                        <li>Wireless & Wired Connection</li>
+                        <li>Touch Controls</li>
+                        <li>Fast Charging (30 min for 8 hours)</li>
+                    </ul>
+                </div>
+
+                <div class="product-options">
+                    <div class="option-group">
+                        <label>Color</label>
+                        <div class="option-values">
+                            <div class="option-value selected" onclick="selectOption(this, 'color')">Black</div>
+                            <div class="option-value" onclick="selectOption(this, 'color')">Silver</div>
+                            <div class="option-value" onclick="selectOption(this, 'color')">Blue</div>
+                            <div class="option-value" onclick="selectOption(this, 'color')">Rose Gold</div>
+                        </div>
+                    </div>
+
+                    <div class="option-group">
+                        <label>Warranty</label>
+                        <div class="option-values">
+                            <div class="option-value selected" onclick="selectOption(this, 'warranty')">1 Year</div>
+                            <div class="option-value" onclick="selectOption(this, 'warranty')">2 Years</div>
+                            <div class="option-value" onclick="selectOption(this, 'warranty')">3 Years</div>
+                        </div>
+                    </div>
+
+                    <div class="option-group">
+                        <label>Quantity</label>
+                        <div class="quantity-selector">
+                            <button class="qty-btn" onclick="decreaseQty()">−</button>
+                            <input type="number" class="qty-input" id="quantity" value="1" min="1">
+                            <button class="qty-btn" onclick="increaseQty()">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <button class="btn btn-primary" onclick="addToCart()">🛒 Add to Cart</button>
+                    <button class="btn btn-secondary" onclick="addToWishlist()">❤️ Wishlist</button>
+                </div>
+
+                <div style="background: #f5f5f5; padding: 15px; border-radius: 6px; font-size: 14px; color: #666;">
+                    <p>✓ Free Shipping on orders over $50</p>
+                    <p>✓ 30-Day Money Back Guarantee</p>
+                    <p>✓ 24/7 Customer Support</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Reviews Section -->
+        <div class="reviews-section">
+            <div class="reviews-header">
+                <h2 class="reviews-title">Customer Reviews</h2>
+                <button class="write-review-btn" onclick="openReviewModal()">✍️ Write a Review</button>
+            </div>
+
+            <div class="review-summary">
+                <div class="average-rating">
+                    <div class="number">4.8</div>
+                    <div class="stars">★★★★★</div>
+                    <div class="review-total">Based on 324 reviews</div>
+                </div>
+
+                <div class="rating-bars" style="flex: 1;">
+                    <div class="rating-bar">
+                        <div class="stars">★★★★★</div>
+                        <div class="bar"><div class="bar-fill" style="width: 85%;"></div></div>
+                        <div class="bar-count">275</div>
+                    </div>
+                    <div class="rating-bar">
+                        <div class="stars">★★★★</div>
+                        <div class="bar"><div class="bar-fill" style="width: 10%;"></div></div>
+                        <div class="bar-count">32</div>
+                    </div>
+                    <div class="rating-bar">
+                        <div class="stars">★★★</div>
+                        <div class="bar"><div class="bar-fill" style="width: 3%;"></div></div>
+                        <div class="bar-count">10</div>
+                    </div>
+                    <div class="rating-bar">
+                        <div class="stars">★★</div>
+                        <div class="bar"><div class="bar-fill" style="width: 1%;"></div></div>
+                        <div class="bar-count">4</div>
+                    </div>
+                    <div class="rating-bar">
+                        <div class="stars">★</div>
+                        <div class="bar"><div class="bar-fill" style="width: 1%;"></div></div>
+                        <div class="bar-count">3</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="filter-section" style="margin-top: 30px; border-top: 2px solid #eee; padding-top: 20px;">
+                <span class="filter-label">Filter by rating:</span>
+                <button class="filter-btn active" onclick="filterReviews('all')">All</button>
+                <button class="filter-btn" onclick="filterReviews(5)">5 Stars</button>
+                <button class="filter-btn" onclick="filterReviews(4)">4 Stars</button>
+                <button class="filter-btn" onclick="filterReviews(3)">3 Stars</button>
+                <button class="filter-btn" onclick="filterReviews('verified')">Verified Only</button>
+            </div>
+
+            <div id="reviewsList">
+                <!-- Reviews will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Review Modal -->
+    <div id="reviewModal" class="modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeReviewModal()">&times;</button>
+            <h2 style="margin-bottom: 20px; color: #2c3e50;">Share Your Review</h2>
+
+            <div class="form-group">
+                <label>Your Rating</label>
+                <div class="star-rating" id="modalStarRating">
+                    <span class="star" onmouseover="hoverStar(1)" onclick="selectStar(1)">★</span>
+                    <span class="star" onmouseover="hoverStar(2)" onclick="selectStar(2)">★</span>
+                    <span class="star" onmouseover="hoverStar(3)" onclick="selectStar(3)">★</span>
+                    <span class="star" onmouseover="hoverStar(4)" onclick="selectStar(4)">★</span>
+                    <span class="star" onmouseover="hoverStar(5)" onclick="selectStar(5)">★</span>
+                </div>
+                <input type="hidden" id="selectedRating" value="5">
+            </div>
+
+            <div class="form-group">
+                <label for="reviewName">Your Name</label>
+                <input type="text" id="reviewName" placeholder="Enter your name">
+            </div>
+
+            <div class="form-group">
+                <label for="reviewTitle">Review Title</label>
+                <input type="text" id="reviewTitle" placeholder="e.g., Amazing headphones!">
+            </div>
+
+            <div class="form-group">
+                <label for="reviewText">Your Review</label>
+                <textarea id="reviewText" placeholder="Share your experience with this product..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>
+                    <input type="checkbox" id="verifiedPurchase"> I have purchased this product
+                </label>
+            </div>
+
+            <button class="btn btn-primary" onclick="submitReview()" style="width: 100%;">Submit Review</button>
+        </div>
+    </div>
+
+    <script>
+        // Product Images with real URLs
+        const productImages = [
+            'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&h=600&fit=crop',
+            'https://images.unsplash.com/photo-1484704849700-f032a568e944?w=800&h=600&fit=crop',
+            'https://images.unsplash.com/photo-1487215078519-e21cc028cb29?w=800&h=600&fit=crop',
+            'https://images.unsplash.com/photo-1487215078519-e21cc028cb29?w=800&h=600&fit=crop'
+        ];
+        let currentImageIndex = 0;
+
+        // Initialize gallery
+        function initGallery() {
+            generateThumbnails();
+            updateMainImage();
+        }
+
+        function generateThumbnails() {
+            const gallery = document.getElementById('thumbnailGallery');
+            gallery.innerHTML = '';
+            productImages.forEach((image, index) => {
+                const thumbnail = document.createElement('div');
+                thumbnail.className = 'thumbnail' + (index === 0 ? ' active' : '');
+                const img = document.createElement('img');
+                img.src = image;
+                img.style.width = '100%';
+                img.style.height = '100%';
+                img.style.objectFit = 'cover';
+                img.alt = 'Product view ' + (index + 1);
+                thumbnail.appendChild(img);
+                thumbnail.onclick = () => selectImage(index);
+                gallery.appendChild(thumbnail);
+            });
+            document.getElementById('totalImages').textContent = productImages.length;
+        }
+
+        function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % productImages.length;
+            updateMainImage();
+        }
+
+        function previousImage() {
+            currentImageIndex = (currentImageIndex - 1 + productImages.length) % productImages.length;
+            updateMainImage();
+        }
+
+        function selectImage(index) {
+            currentImageIndex = index;
+            updateMainImage();
+        }
+
+        function updateMainImage() {
+            const mainImageDiv = document.getElementById('mainImage');
+            mainImageDiv.innerHTML = '';
+            const img = document.createElement('img');
+            img.src = productImages[currentImageIndex];
+            img.style.width = '100%';
+            img.style.height = '100%';
+            img.style.objectFit = 'contain';
+            img.alt = 'Product main image';
+            mainImageDiv.appendChild(img);
+            document.getElementById('currentImage').textContent = currentImageIndex + 1;
+            
+            document.querySelectorAll('.thumbnail').forEach((thumb, index) => {
+                thumb.classList.toggle('active', index === currentImageIndex);
+            });
+        }
+
+        // Reviews data
+        let selectedRating = 5;
+        let availableReviews = [
+            {
+                name: 'Sarah Mitchell',
+                rating: 5,
+                date: '2024-04-28',
+                title: 'Best headphones I\'ve ever owned!',
+                text: 'The sound quality is incredible and the noise cancellation is amazing. Battery lasts forever and they\'re super comfortable even for extended wear.',
+                helpful: 124,
+                verified: true
+            },
+            {
+                name: 'James Rodriguez',
+                rating: 5,
+                date: '2024-04-25',
+                title: 'Excellent value for money',
+                text: 'For the price, these headphones deliver premium features. The build quality feels solid and the controls are intuitive. Highly recommend!',
+                helpful: 87,
+                verified: true
+            },
+            {
+                name: 'Emma Wilson',
+                rating: 4,
+                date: '2024-04-20',
+                title: 'Great product, minor issues',
+                text: 'Love the sound and comfort, but charging cable could be better. Overall still a fantastic purchase and delivery was quick.',
+                helpful: 56,
+                verified: true
+            },
+            {
+                name: 'David Chen',
+                rating: 5,
+                date: '2024-04-18',
+                title: 'Perfect for travel and work',
+                text: 'Used these for travel and work. ANC is top-notch, microphone quality is clear, and the case is compact. Definitely worth every penny.',
+                helpful: 203,
+                verified: true
+            },
+            {
+                name: 'Lisa Thompson',
+                rating: 5,
+                date: '2024-04-15',
+                title: 'Worth every penny',
+                text: 'These replaced my previous headphones and I can\'t believe the difference. Bass is powerful, mid-range is clear, and treble is crisp.',
+                helpful: 145,
+                verified: false
+            },
+            {
+                name: 'Michael Park',
+                rating: 4,
+                date: '2024-04-12',
+                title: 'Solid purchase',
+                text: 'Good quality overall. Works perfectly with all my devices. Only wish they had more color options.',
+                helpful: 34,
+                verified: true
+            }
+        ];
+
+        // Initialize gallery on page load
+        document.addEventListener('DOMContentLoaded', initGallery);
+
+        // Product Options
+        function selectOption(element, type) {
+            document.querySelectorAll(`.option-values .option-value`).forEach(opt => {
+                if (opt.parentElement === element.parentElement) {
+                    opt.classList.remove('selected');
+                }
+            });
+            element.classList.add('selected');
+        }
+
+        // Quantity Controls
+        function increaseQty() {
+            const qty = document.getElementById('quantity');
+            qty.value = parseInt(qty.value) + 1;
+        }
+
+        function decreaseQty() {
+            const qty = document.getElementById('quantity');
+            if (parseInt(qty.value) > 1) {
+                qty.value = parseInt(qty.value) - 1;
+            }
+        }
+
+        // Add to Cart
+        function addToCart() {
+            const quantity = document.getElementById('quantity').value;
+            const color = document.querySelector(`.option-values .option-value.selected[onclick="selectOption(this, 'color')"]`)?.textContent || 'Black';
+            
+            const message = `Added ${quantity} Premium Wireless Headphones (${color}) to cart!`;
+            showSuccessMessage(message);
+            document.getElementById('quantity').value = 1;
+        }
+
+        // Wishlist
+        function addToWishlist() {
+            showSuccessMessage('Added to Wishlist! ❤️');
+        }
+
+        function showSuccessMessage(message) {
+            const msg = document.getElementById('successMessage');
+            msg.textContent = message;
+            msg.classList.add('show');
+            setTimeout(() => {
+                msg.classList.remove('show');
+            }, 3000);
+        }
+
+        // Reviews Modal
+        function openReviewModal() {
+            document.getElementById('reviewModal').style.display = 'block';
+            resetReviewForm();
+        }
+
+        function closeReviewModal() {
+            document.getElementById('reviewModal').style.display = 'none';
+        }
+
+        function resetReviewForm() {
+            document.getElementById('reviewName').value = '';
+            document.getElementById('reviewTitle').value = '';
+            document.getElementById('reviewText').value = '';
+            document.getElementById('selectedRating').value = '5';
+            document.getElementById('verifiedPurchase').checked = false;
+            selectedRating = 5;
+            updateModalStars();
+        }
+
+        function hoverStar(rating) {
+            const stars = document.querySelectorAll('#modalStarRating .star');
+            stars.forEach((star, index) => {
+                if (index < rating) {
+                    star.classList.add('active');
+                } else {
+                    star.classList.remove('active');
+                }
+            });
+        }
+
+        function selectStar(rating) {
+            selectedRating = rating;
+            document.getElementById('selectedRating').value = rating;
+            updateModalStars();
+        }
+
+        function updateModalStars() {
+            const stars = document.querySelectorAll('#modalStarRating .star');
+            stars.forEach((star, index) => {
+                if (index < selectedRating) {
+                    star.classList.add('active');
+                } else {
+                    star.classList.remove('active');
+                }
+            });
+        }
+
+        function submitReview() {
+            const name = document.getElementById('reviewName').value;
+            const title = document.getElementById('reviewTitle').value;
+            const text = document.getElementById('reviewText').value;
+            const rating = parseInt(document.getElementById('selectedRating').value);
+            const verified = document.getElementById('verifiedPurchase').checked;
+
+            if (!name || !title || !text) {
+                alert('Please fill in all fields!');
+                return;
+            }
+
+            const newReview = {
+                name: name,
+                rating: rating,
+                date: new Date().toISOString().split('T')[0],
+                title: title,
+                text: text,
+                helpful: 0,
+                verified: verified
+            };
+
+            availableReviews.unshift(newReview);
+            displayReviews(availableReviews);
+            closeReviewModal();
+            showSuccessMessage('✓ Thank you for your review!');
+        }
+
+        function filterReviews(filterType) {
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            let filtered = availableReviews;
+
+            if (filterType !== 'all' && filterType !== 'verified') {
+                filtered = availableReviews.filter(r => r.rating === filterType);
+            } else if (filterType === 'verified') {
+                filtered = availableReviews.filter(r => r.verified);
+            }
+
+            displayReviews(filtered);
+        }
+
+        function displayReviews(reviews) {
+            const reviewsList = document.getElementById('reviewsList');
+            reviewsList.innerHTML = '';
+
+            reviews.forEach(review => {
+                const reviewEl = document.createElement('div');
+                reviewEl.className = 'review-item';
+                reviewEl.innerHTML = `
+                    <div class="review-header">
+                        <div>
+                            <div class="reviewer-name">${review.name} ${review.verified ? '✓' : ''}</div>
+                            <div class="review-date">${new Date(review.date).toLocaleDateString()}</div>
+                        </div>
+                    </div>
+                    <div class="review-rating">
+                        ${'★'.repeat(review.rating)}${'☆'.repeat(5 - review.rating)}
+                    </div>
+                    <div class="review-title">${review.title}</div>
+                    <div class="review-text">${review.text}</div>
+                    <div class="review-helpful">
+                        <button class="helpful-btn" onclick="markHelpful(this)">👍 Helpful (${review.helpful})</button>
+                        <button class="helpful-btn">👎 Not Helpful</button>
+                    </div>
+                `;
+                reviewsList.appendChild(reviewEl);
+            });
+        }
+
+        function markHelpful(button) {
+            button.textContent = '👍 Helpful (' + (parseInt(button.textContent.match(/\d+/)[0]) + 1) + ')';
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('reviewModal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        }
+
+        // Initial display
+        displayReviews(availableReviews);
+        initGallery();
+    </script>
+</body>
+</html>

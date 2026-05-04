@@ -1,0 +1,66 @@
+1st April
+I began my internship at CodTech IT Solutions and understood the internship structure, company overview, and project expectations.
+
+2nd April
+I explored the company profile, internship tasks, and the required submission format. I also reviewed the tools and technologies that would be used during the internship.
+
+3rd April
+I studied the objective of Task 1 and planned the ETL pipeline development workflow. I understood how data preprocessing and transformation are important in data engineering.
+
+4th April
+I started Task 1 by preparing the Python environment and importing the required libraries such as pandas and scikit-learn.
+
+5th April
+I worked on loading the dataset and handling duplicates. I also checked the structure of the data and identified numeric and categorical columns.
+
+6th April
+I implemented missing value handling for both numeric and categorical features using appropriate imputation techniques.
+7th April
+I added data transformation steps, including scaling numeric features and encoding categorical features using scikit-learn pipelines.
+
+8th April
+I tested the ETL pipeline and verified the output format. I ensured that the transformed data was saved successfully as a CSV file.
+
+9th April
+I finalized Task 1 and documented the ETL pipeline workflow, including preprocessing, transformation, and data loading steps.
+
+10th April
+I started Task 2 and studied the problem statement for the deep learning project. I planned the CNN model structure for image classification.
+
+11th April
+I set up the deep learning script and imported TensorFlow, NumPy, Matplotlib, and scikit-learn modules needed for the project.
+
+12th April
+I designed the CNN model architecture with convolution, pooling, flatten, dense, and dropout layers.
+
+13th April
+I prepared the MNIST dataset for training by normalizing the images and reshaping them to fit the CNN input format.
+
+14th April
+I trained the CNN model and monitored accuracy and loss during the training process.
+
+15th April
+I evaluated the model using the test dataset and generated predictions for performance analysis.
+25th April
+I started Task 3 by working on the structure of the e-commerce product page. I planned the layout, product section, and basic interactive elements.
+
+26th April
+Sunday, so no internship work was done.
+
+27th April
+I created the main product page design using HTML and CSS. I added the product image area, pricing section, and action buttons.
+
+28th April
+I implemented the product gallery with navigation controls and improved the visual presentation of the page.
+
+29th April
+I added the customer reviews section, including ratings, review cards, and review summary.
+
+30th April
+I made the page responsive and adjusted spacing, alignment, and styling to make the design more professional.
+
+1st May
+I tested the complete Task 3 page and ensured that the image gallery, product details, and review features were working properly.
+
+2nd May
+I finalized Task 3 and prepared the screenshots and presentation materials for submission.
