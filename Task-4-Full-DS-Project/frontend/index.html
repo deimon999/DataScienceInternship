@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price Prediction - Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-home"></i>
+                    <h1>House Price Prediction API</h1>
+                </div>
+                <div class="api-status" id="apiStatus">
+                    <span class="status-indicator" id="statusIndicator"></span>
+                    <span id="statusText">Checking...</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <!-- Tabs Navigation -->
+            <nav class="tabs">
+                <button class="tab-button active" data-tab="predict">
+                    <i class="fas fa-magic"></i> Predict Price
+                </button>
+                <button class="tab-button" data-tab="batch">
+                    <i class="fas fa-layer-group"></i> Batch Prediction
+                </button>
+                <button class="tab-button" data-tab="model-info">
+                    <i class="fas fa-info-circle"></i> Model Info
+                </button>
+                <button class="tab-button" data-tab="analytics">
+                    <i class="fas fa-chart-bar"></i> Analytics
+                </button>
+            </nav>
+
+            <!-- Single Prediction Tab -->
+            <section id="predict" class="tab-content active">
+                <div class="prediction-container">
+                    <div class="form-section">
+                        <h2>House Features</h2>
+                        <form id="predictionForm">
+                            <div class="form-group">
+                                <label for="square_feet">Square Feet</label>
+                                <input type="number" id="square_feet" name="square_feet" placeholder="e.g., 2500" min="500" max="5000" required>
+                                <span class="help-text">House size (500-5000 sq ft)</span>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="bedrooms">Bedrooms</label>
+                                    <input type="number" id="bedrooms" name="bedrooms" placeholder="4" min="1" max="10" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="bathrooms">Bathrooms</label>
+                                    <input type="number" id="bathrooms" name="bathrooms" placeholder="2.5" min="1" max="10" step="0.5" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="age">Age (years)</label>
+                                    <input type="number" id="age" name="age" placeholder="0" min="0" max="150" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="garage">Garage Spaces</label>
+                                    <input type="number" id="garage" name="garage" placeholder="2" min="0" max="5" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="location_score">Location Score</label>
+                                    <input type="number" id="location_score" name="location_score" placeholder="7" min="1" max="10" step="0.5" required>
+                                    <span class="help-text">1-10 (10 = excellent location)</span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inrToggle"><input type="checkbox" id="inrToggle" checked> Display price in INR (Bangalore)</label>
+                                </div>
+                                <div class="form-group">
+                                    <label for="condition">Condition</label>
+                                    <select id="condition" name="condition" required>
+                                        <option value="">Select condition...</option>
+                                        <option value="excellent">Excellent</option>
+                                        <option value="good">Good</option>
+                                        <option value="fair">Fair</option>
+                                        <option value="poor">Poor</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-calculator"></i> Predict Price
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Prediction Result -->
+                    <div class="result-section" id="resultSection" style="display: none;">
+                        <h2>Prediction Result</h2>
+                        <div class="result-card">
+                            <div class="predicted-price">
+                                <p class="label">Predicted Price</p>
+                                <p class="price" id="predictedPrice">₹0</p>
+                            </div>
+                            <div class="confidence">
+                                <p class="label">Confidence Level</p>
+                                <div class="confidence-bar">
+                                    <div class="confidence-fill" id="confidenceFill"></div>
+                                </div>
+                                <p class="percentage" id="confidencePercent">0%</p>
+                            </div>
+                            <div class="price-range">
+                                <p class="label">Prediction Range (±10%)</p>
+                                <div class="range-info">
+                                    <div class="range-item">
+                                        <span class="range-label">Lower Bound</span>
+                                        <span class="range-value" id="lowerBound">₹0</span>
+                                    </div>
+                                    <div class="range-item">
+                                        <span class="range-label">Upper Bound</span>
+                                        <span class="range-value" id="upperBound">₹0</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-secondary" onclick="resetForm()">
+                            <i class="fas fa-redo"></i> New Prediction
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Batch Prediction Tab -->
+            <section id="batch" class="tab-content">
+                <div class="batch-container">
+                    <h2>Batch Price Prediction</h2>
+                    <p class="description">Upload a CSV file with house data for batch predictions</p>
+                    
+                    <div class="upload-area" id="uploadArea">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <p>Drag and drop CSV file here or click to upload</p>
+                        <input type="file" id="csvFile" accept=".csv" style="display: none;">
+                    </div>
+
+                    <div class="csv-template">
+                        <p><strong>CSV Format:</strong></p>
+                        <code>square_feet,bedrooms,bathrooms,age,garage,location_score,condition</code>
+                    </div>
+
+                    <div id="batchResults" style="display: none;">
+                        <h3>Results</h3>
+                        <div class="batch-stats">
+                            <div class="stat-item">
+                                <span class="stat-label">Total Predictions</span>
+                                <span class="stat-value" id="totalPredictions">0</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Average Price</span>
+                                <span class="stat-value" id="avgPrice">₹0</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Min Price</span>
+                                <span class="stat-value" id="minPrice">₹0</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Max Price</span>
+                                <span class="stat-value" id="maxPrice">₹0</span>
+                            </div>
+                        </div>
+                        <div id="predictionsTable"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Model Info Tab -->
+            <section id="model-info" class="tab-content">
+                <div class="model-info-container">
+                    <h2>Model Information</h2>
+                    
+                    <div class="info-grid">
+                        <div class="info-card">
+                            <h3>Model Details</h3>
+                            <ul id="modelDetails">
+                                <li><span class="label">Loading...</span></li>
+                            </ul>
+                        </div>
+
+                        <div class="info-card">
+                            <h3>Feature Importance</h3>
+                            <div id="featureImportance">
+                                <p>Loading...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Analytics Tab -->
+            <section id="analytics" class="tab-content">
+                <div class="analytics-container">
+                    <h2>Prediction Analytics</h2>
+                    <div class="analytics-grid">
+                        <div class="analytics-card">
+                            <h3>Recent Predictions</h3>
+                            <div id="recentPredictions">
+                                <p>No predictions yet</p>
+                            </div>
+                        </div>
+                        <div class="analytics-card">
+                            <h3>Price Distribution</h3>
+                            <div id="priceChart" class="chart-placeholder">
+                                Chart will appear here
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>House Price Prediction API v1.0.0 | Advanced ML Model</p>
+            <p>Built with FastAPI, Advanced ML Algorithms & Modern Frontend</p>
+        </footer>
+    </div>
+
+    <!-- Loading Spinner -->
+    <div id="loadingSpinner" class="loading-spinner" style="display: none;">
+        <div class="spinner"></div>
+        <p>Processing...</p>
+    </div>
+
+    <!-- Error Toast -->
+    <div id="errorToast" class="toast" style="display: none;"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

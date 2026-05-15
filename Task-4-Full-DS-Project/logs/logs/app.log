@@ -1,0 +1,799 @@
+{"timestamp": "2026-05-15T17:58:10.224069+00:00", "level": null, "name": "house_price_prediction", "message": "Logging system initialized", "log_level": "INFO", "log_file": "E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\logs\\logs\\app.log", "debug_mode": false}
+{"timestamp": "2026-05-15T17:58:24.893659+00:00", "level": null, "name": "house_price_prediction", "message": "================================================================================"}
+{"timestamp": "2026-05-15T17:58:24.894392+00:00", "level": null, "name": "house_price_prediction", "message": "HOUSE PRICE PREDICTION - TRAINING PIPELINE"}
+{"timestamp": "2026-05-15T17:58:24.894461+00:00", "level": null, "name": "house_price_prediction", "message": "================================================================================"}
+{"timestamp": "2026-05-15T17:58:24.894651+00:00", "level": null, "name": "house_price_prediction", "message": "\n[STEP 1] Loading data..."}
+{"timestamp": "2026-05-15T17:58:24.894731+00:00", "level": null, "name": "house_price_prediction", "message": "Loading data from E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\data\\train.csv"}
+{"timestamp": "2026-05-15T17:58:24.925114+00:00", "level": null, "name": "house_price_prediction", "message": "Training data loaded: (800, 8)"}
+{"timestamp": "2026-05-15T17:58:24.933640+00:00", "level": null, "name": "house_price_prediction", "message": "Data split: train (640, 8), test (160, 8)"}
+{"timestamp": "2026-05-15T17:58:24.940444+00:00", "level": null, "name": "house_price_prediction", "message": "\n[STEP 2] Preprocessing data..."}
+{"timestamp": "2026-05-15T17:58:24.940609+00:00", "level": null, "name": "house_price_prediction", "message": "AdvancedPreprocessor initialized"}
+{"timestamp": "2026-05-15T17:58:24.941606+00:00", "level": null, "name": "house_price_prediction", "message": "Starting data preprocessing pipeline"}
+{"timestamp": "2026-05-15T17:58:24.945252+00:00", "level": null, "name": "house_price_prediction", "message": "Identified 7 numeric and 1 categorical features"}
+{"timestamp": "2026-05-15T17:58:24.946658+00:00", "level": null, "name": "house_price_prediction", "message": "Missing values handled successfully"}
+{"timestamp": "2026-05-15T17:58:24.950216+00:00", "level": null, "name": "house_price_prediction", "message": "Found 3 outliers in square_feet, capping values"}
+{"timestamp": "2026-05-15T17:58:24.953717+00:00", "level": null, "name": "house_price_prediction", "message": "Found 56 outliers in bedrooms, capping values"}
+{"timestamp": "2026-05-15T17:58:24.957235+00:00", "level": null, "name": "house_price_prediction", "message": "Found 24 outliers in age, capping values"}
+{"timestamp": "2026-05-15T17:58:24.959053+00:00", "level": null, "name": "house_price_prediction", "message": "Found 306 outliers in garage, capping values"}
+{"timestamp": "2026-05-15T17:58:24.960776+00:00", "level": null, "name": "house_price_prediction", "message": "Found 3 outliers in location_score, capping values"}
+{"timestamp": "2026-05-15T17:58:24.962754+00:00", "level": null, "name": "house_price_prediction", "message": "Found 65 outliers in Price, capping values"}
+{"timestamp": "2026-05-15T17:58:24.971209+00:00", "level": null, "name": "house_price_prediction", "message": "Created 16 features through feature engineering"}
+{"timestamp": "2026-05-15T17:58:24.978355+00:00", "level": null, "name": "house_price_prediction", "message": "Features scaled using standard scaler"}
+{"timestamp": "2026-05-15T17:58:24.978534+00:00", "level": null, "name": "house_price_prediction", "message": "Preprocessing completed: {'original_shape': (640, 16), 'final_shape': (640, 15), 'numeric_features': 7, 'categorical_features': 1, 'feature_names': ['square_feet', 'bedrooms', 'bathrooms', 'age', 'garage', 'location_score', 'condition', 'square_feet_squared', 'square_feet_sqrt', 'bedrooms_squared', 'bedrooms_sqrt', 'bathrooms_squared', 'bathrooms_sqrt', 'square_feet_x_bedrooms', 'bedrooms_x_bathrooms']}"}
+{"timestamp": "2026-05-15T17:58:24.978612+00:00", "level": null, "name": "house_price_prediction", "message": "Transforming new data with fitted preprocessor"}
+{"timestamp": "2026-05-15T17:58:24.979904+00:00", "level": null, "name": "house_price_prediction", "message": "Missing values handled successfully"}
+{"timestamp": "2026-05-15T17:58:24.983039+00:00", "level": null, "name": "house_price_prediction", "message": "Found 1 outliers in square_feet, capping values"}
+{"timestamp": "2026-05-15T17:58:24.987409+00:00", "level": null, "name": "house_price_prediction", "message": "Found 14 outliers in bedrooms, capping values"}
+{"timestamp": "2026-05-15T17:58:24.989939+00:00", "level": null, "name": "house_price_prediction", "message": "Found 1 outliers in bathrooms, capping values"}
+{"timestamp": "2026-05-15T17:58:24.991643+00:00", "level": null, "name": "house_price_prediction", "message": "Found 10 outliers in age, capping values"}
+{"timestamp": "2026-05-15T17:58:24.993436+00:00", "level": null, "name": "house_price_prediction", "message": "Found 8 outliers in garage, capping values"}
+{"timestamp": "2026-05-15T17:58:24.997785+00:00", "level": null, "name": "house_price_prediction", "message": "Created 15 features through feature engineering"}
+{"timestamp": "2026-05-15T17:58:24.998583+00:00", "level": null, "name": "house_price_prediction", "message": "\n================================================================================"}
+{"timestamp": "2026-05-15T17:58:24.998682+00:00", "level": null, "name": "house_price_prediction", "message": "ERROR IN TRAINING PIPELINE: This StandardScaler instance is not fitted yet. Call 'fit' with appropriate arguments before using this estimator."}
+{"timestamp": "2026-05-15T17:58:24.998727+00:00", "level": null, "name": "house_price_prediction", "message": "================================================================================"}
+{"timestamp": "2026-05-15T18:00:58.837278+00:00", "level": null, "name": "house_price_prediction", "message": "Logging system initialized", "log_level": "INFO", "log_file": "E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\logs\\logs\\app.log", "debug_mode": false}
+{"timestamp": "2026-05-15T18:01:03.854231+00:00", "level": null, "name": "house_price_prediction", "message": "================================================================================"}
+{"timestamp": "2026-05-15T18:01:03.854564+00:00", "level": null, "name": "house_price_prediction", "message": "HOUSE PRICE PREDICTION - TRAINING PIPELINE"}
+{"timestamp": "2026-05-15T18:01:03.854660+00:00", "level": null, "name": "house_price_prediction", "message": "================================================================================"}
+{"timestamp": "2026-05-15T18:01:03.854742+00:00", "level": null, "name": "house_price_prediction", "message": "\n[STEP 1] Loading data..."}
+{"timestamp": "2026-05-15T18:01:03.854851+00:00", "level": null, "name": "house_price_prediction", "message": "Loading data from E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\data\\train.csv"}
+{"timestamp": "2026-05-15T18:01:03.865186+00:00", "level": null, "name": "house_price_prediction", "message": "Training data loaded: (800, 8)"}
+{"timestamp": "2026-05-15T18:01:03.879306+00:00", "level": null, "name": "house_price_prediction", "message": "Data split: train (640, 8), test (160, 8)"}
+{"timestamp": "2026-05-15T18:01:03.884844+00:00", "level": null, "name": "house_price_prediction", "message": "\n[STEP 2] Preprocessing data..."}
+{"timestamp": "2026-05-15T18:01:03.885077+00:00", "level": null, "name": "house_price_prediction", "message": "AdvancedPreprocessor initialized"}
+{"timestamp": "2026-05-15T18:01:03.885827+00:00", "level": null, "name": "house_price_prediction", "message": "Starting data preprocessing pipeline"}
+{"timestamp": "2026-05-15T18:01:03.887157+00:00", "level": null, "name": "house_price_prediction", "message": "Identified 7 numeric and 1 categorical features"}
+{"timestamp": "2026-05-15T18:01:03.891042+00:00", "level": null, "name": "house_price_prediction", "message": "Missing values handled successfully"}
+{"timestamp": "2026-05-15T18:01:03.898239+00:00", "level": null, "name": "house_price_prediction", "message": "Found 3 outliers in square_feet, capping values"}
+{"timestamp": "2026-05-15T18:01:03.905109+00:00", "level": null, "name": "house_price_prediction", "message": "Found 56 outliers in bedrooms, capping values"}
+{"timestamp": "2026-05-15T18:01:03.912389+00:00", "level": null, "name": "house_price_prediction", "message": "Found 24 outliers in age, capping values"}
+{"timestamp": "2026-05-15T18:01:03.917073+00:00", "level": null, "name": "house_price_prediction", "message": "Found 306 outliers in garage, capping values"}
+{"timestamp": "2026-05-15T18:01:03.921515+00:00", "level": null, "name": "house_price_prediction", "message": "Found 3 outliers in location_score, capping values"}
+{"timestamp": "2026-05-15T18:01:03.925863+00:00", "level": null, "name": "house_price_prediction", "message": "Found 65 outliers in Price, capping values"}
+{"timestamp": "2026-05-15T18:01:03.933352+00:00", "level": null, "name": "house_price_prediction", "message": "Created 16 features through feature engineering"}
+{"timestamp": "2026-05-15T18:01:03.945071+00:00", "level": null, "name": "house_price_prediction", "message": "Features scaled using standard scaler"}
+{"timestamp": "2026-05-15T18:01:03.945481+00:00", "level": null, "name": "house_price_prediction", "message": "Preprocessing completed: {'original_shape': (640, 16), 'final_shape': (640, 15), 'numeric_features': 7, 'categorical_features': 1, 'feature_names': ['square_feet', 'bedrooms', 'bathrooms', 'age', 'garage', 'location_score', 'condition', 'square_feet_squared', 'square_feet_sqrt', 'bedrooms_squared', 'bedrooms_sqrt', 'bathrooms_squared', 'bathrooms_sqrt', 'square_feet_x_bedrooms', 'bedrooms_x_bathrooms']}"}
+{"timestamp": "2026-05-15T18:01:03.945672+00:00", "level": null, "name": "house_price_prediction", "message": "Transforming new data with fitted preprocessor"}
+{"timestamp": "2026-05-15T18:01:03.949126+00:00", "level": null, "name": "house_price_prediction", "message": "Missing values handled successfully"}
+{"timestamp": "2026-05-15T18:01:03.952114+00:00", "level": null, "name": "house_price_prediction", "message": "Found 1 outliers in square_feet, capping values"}
+{"timestamp": "2026-05-15T18:01:03.955377+00:00", "level": null, "name": "house_price_prediction", "message": "Found 14 outliers in bedrooms, capping values"}
+{"timestamp": "2026-05-15T18:01:03.959905+00:00", "level": null, "name": "house_price_prediction", "message": "Found 1 outliers in bathrooms, capping values"}
+{"timestamp": "2026-05-15T18:01:03.964201+00:00", "level": null, "name": "house_price_prediction", "message": "Found 10 outliers in age, capping values"}
+{"timestamp": "2026-05-15T18:01:03.968742+00:00", "level": null, "name": "house_price_prediction", "message": "Found 8 outliers in garage, capping values"}
+{"timestamp": "2026-05-15T18:01:03.982769+00:00", "level": null, "name": "house_price_prediction", "message": "Created 15 features through feature engineering"}
+{"timestamp": "2026-05-15T18:01:03.987696+00:00", "level": null, "name": "house_price_prediction", "message": "Features scaled using standard scaler"}
+{"timestamp": "2026-05-15T18:01:03.990134+00:00", "level": null, "name": "house_price_prediction", "message": "Data transformed successfully to shape (160, 15)"}
+{"timestamp": "2026-05-15T18:01:03.990436+00:00", "level": null, "name": "house_price_prediction", "message": "Preprocessing info: {'original_shape': (640, 16), 'final_shape': (640, 15), 'numeric_features': 7, 'categorical_features': 1, 'feature_names': ['square_feet', 'bedrooms', 'bathrooms', 'age', 'garage', 'location_score', 'condition', 'square_feet_squared', 'square_feet_sqrt', 'bedrooms_squared', 'bedrooms_sqrt', 'bathrooms_squared', 'bathrooms_sqrt', 'square_feet_x_bedrooms', 'bedrooms_x_bathrooms']}"}
+{"timestamp": "2026-05-15T18:01:03.990637+00:00", "level": null, "name": "house_price_prediction", "message": "\n[STEP 3] Training multiple models..."}
+{"timestamp": "2026-05-15T18:01:03.990787+00:00", "level": null, "name": "house_price_prediction", "message": "ModelTrainer initialized"}
+{"timestamp": "2026-05-15T18:01:03.991070+00:00", "level": null, "name": "house_price_prediction", "message": "Starting multi-model training"}
+{"timestamp": "2026-05-15T18:01:03.991565+00:00", "level": null, "name": "house_price_prediction", "message": "Building XGBoost model"}
+{"timestamp": "2026-05-15T18:01:03.992807+00:00", "level": null, "name": "house_price_prediction", "message": "\n================================================================================"}
+{"timestamp": "2026-05-15T18:01:03.993146+00:00", "level": null, "name": "house_price_prediction", "message": "ERROR IN TRAINING PIPELINE: xgboost.sklearn.XGBRegressor() got multiple values for keyword argument 'random_state'"}
+{"timestamp": "2026-05-15T18:01:03.993257+00:00", "level": null, "name": "house_price_prediction", "message": "================================================================================"}
+{"timestamp": "2026-05-15T18:02:51.594380+00:00", "level": null, "name": "house_price_prediction", "message": "Logging system initialized", "log_level": "INFO", "log_file": "E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\logs\\logs\\app.log", "debug_mode": false}
+{"timestamp": "2026-05-15T18:02:55.693548+00:00", "level": null, "name": "house_price_prediction", "message": "================================================================================"}
+{"timestamp": "2026-05-15T18:02:55.693954+00:00", "level": null, "name": "house_price_prediction", "message": "HOUSE PRICE PREDICTION - TRAINING PIPELINE"}
+{"timestamp": "2026-05-15T18:02:55.694064+00:00", "level": null, "name": "house_price_prediction", "message": "================================================================================"}
+{"timestamp": "2026-05-15T18:02:55.694147+00:00", "level": null, "name": "house_price_prediction", "message": "\n[STEP 1] Loading data..."}
+{"timestamp": "2026-05-15T18:02:55.694262+00:00", "level": null, "name": "house_price_prediction", "message": "Loading data from E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\data\\train.csv"}
+{"timestamp": "2026-05-15T18:02:55.700745+00:00", "level": null, "name": "house_price_prediction", "message": "Training data loaded: (800, 8)"}
+{"timestamp": "2026-05-15T18:02:55.705333+00:00", "level": null, "name": "house_price_prediction", "message": "Data split: train (640, 8), test (160, 8)"}
+{"timestamp": "2026-05-15T18:02:55.708229+00:00", "level": null, "name": "house_price_prediction", "message": "\n[STEP 2] Preprocessing data..."}
+{"timestamp": "2026-05-15T18:02:55.708416+00:00", "level": null, "name": "house_price_prediction", "message": "AdvancedPreprocessor initialized"}
+{"timestamp": "2026-05-15T18:02:55.709193+00:00", "level": null, "name": "house_price_prediction", "message": "Starting data preprocessing pipeline"}
+{"timestamp": "2026-05-15T18:02:55.710553+00:00", "level": null, "name": "house_price_prediction", "message": "Identified 7 numeric and 1 categorical features"}
+{"timestamp": "2026-05-15T18:02:55.713183+00:00", "level": null, "name": "house_price_prediction", "message": "Missing values handled successfully"}
+{"timestamp": "2026-05-15T18:02:55.715690+00:00", "level": null, "name": "house_price_prediction", "message": "Found 3 outliers in square_feet, capping values"}
+{"timestamp": "2026-05-15T18:02:55.720515+00:00", "level": null, "name": "house_price_prediction", "message": "Found 56 outliers in bedrooms, capping values"}
+{"timestamp": "2026-05-15T18:02:55.727786+00:00", "level": null, "name": "house_price_prediction", "message": "Found 24 outliers in age, capping values"}
+{"timestamp": "2026-05-15T18:02:55.730977+00:00", "level": null, "name": "house_price_prediction", "message": "Found 306 outliers in garage, capping values"}
+{"timestamp": "2026-05-15T18:02:55.734104+00:00", "level": null, "name": "house_price_prediction", "message": "Found 3 outliers in location_score, capping values"}
+{"timestamp": "2026-05-15T18:02:55.739770+00:00", "level": null, "name": "house_price_prediction", "message": "Found 65 outliers in Price, capping values"}
+{"timestamp": "2026-05-15T18:02:55.747322+00:00", "level": null, "name": "house_price_prediction", "message": "Created 16 features through feature engineering"}
+{"timestamp": "2026-05-15T18:02:55.757316+00:00", "level": null, "name": "house_price_prediction", "message": "Features scaled using standard scaler"}
+{"timestamp": "2026-05-15T18:02:55.757669+00:00", "level": null, "name": "house_price_prediction", "message": "Preprocessing completed: {'original_shape': (640, 16), 'final_shape': (640, 15), 'numeric_features': 7, 'categorical_features': 1, 'feature_names': ['square_feet', 'bedrooms', 'bathrooms', 'age', 'garage', 'location_score', 'condition', 'square_feet_squared', 'square_feet_sqrt', 'bedrooms_squared', 'bedrooms_sqrt', 'bathrooms_squared', 'bathrooms_sqrt', 'square_feet_x_bedrooms', 'bedrooms_x_bathrooms']}"}
+{"timestamp": "2026-05-15T18:02:55.757820+00:00", "level": null, "name": "house_price_prediction", "message": "Transforming new data with fitted preprocessor"}
+{"timestamp": "2026-05-15T18:02:55.760279+00:00", "level": null, "name": "house_price_prediction", "message": "Missing values handled successfully"}
+{"timestamp": "2026-05-15T18:02:55.762420+00:00", "level": null, "name": "house_price_prediction", "message": "Found 1 outliers in square_feet, capping values"}
+{"timestamp": "2026-05-15T18:02:55.765905+00:00", "level": null, "name": "house_price_prediction", "message": "Found 14 outliers in bedrooms, capping values"}
+{"timestamp": "2026-05-15T18:02:55.770962+00:00", "level": null, "name": "house_price_prediction", "message": "Found 1 outliers in bathrooms, capping values"}
+{"timestamp": "2026-05-15T18:02:55.774835+00:00", "level": null, "name": "house_price_prediction", "message": "Found 10 outliers in age, capping values"}
+{"timestamp": "2026-05-15T18:02:55.777985+00:00", "level": null, "name": "house_price_prediction", "message": "Found 8 outliers in garage, capping values"}
+{"timestamp": "2026-05-15T18:02:55.788479+00:00", "level": null, "name": "house_price_prediction", "message": "Created 15 features through feature engineering"}
+{"timestamp": "2026-05-15T18:02:55.794542+00:00", "level": null, "name": "house_price_prediction", "message": "Features scaled using standard scaler"}
+{"timestamp": "2026-05-15T18:02:55.795704+00:00", "level": null, "name": "house_price_prediction", "message": "Data transformed successfully to shape (160, 15)"}
+{"timestamp": "2026-05-15T18:02:55.795899+00:00", "level": null, "name": "house_price_prediction", "message": "Preprocessing info: {'original_shape': (640, 16), 'final_shape': (640, 15), 'numeric_features': 7, 'categorical_features': 1, 'feature_names': ['square_feet', 'bedrooms', 'bathrooms', 'age', 'garage', 'location_score', 'condition', 'square_feet_squared', 'square_feet_sqrt', 'bedrooms_squared', 'bedrooms_sqrt', 'bathrooms_squared', 'bathrooms_sqrt', 'square_feet_x_bedrooms', 'bedrooms_x_bathrooms']}"}
+{"timestamp": "2026-05-15T18:02:55.795990+00:00", "level": null, "name": "house_price_prediction", "message": "\n[STEP 3] Training multiple models..."}
+{"timestamp": "2026-05-15T18:02:55.796069+00:00", "level": null, "name": "house_price_prediction", "message": "ModelTrainer initialized"}
+{"timestamp": "2026-05-15T18:02:55.796205+00:00", "level": null, "name": "house_price_prediction", "message": "Starting multi-model training"}
+{"timestamp": "2026-05-15T18:02:55.796276+00:00", "level": null, "name": "house_price_prediction", "message": "Building XGBoost model"}
+{"timestamp": "2026-05-15T18:02:55.796415+00:00", "level": null, "name": "house_price_prediction", "message": "Building LightGBM model"}
+{"timestamp": "2026-05-15T18:02:55.796534+00:00", "level": null, "name": "house_price_prediction", "message": "Building CatBoost model"}
+{"timestamp": "2026-05-15T18:02:55.803500+00:00", "level": null, "name": "house_price_prediction", "message": "Building Random Forest model"}
+{"timestamp": "2026-05-15T18:02:55.803833+00:00", "level": null, "name": "house_price_prediction", "message": "Building Gradient Boosting model"}
+{"timestamp": "2026-05-15T18:02:55.804131+00:00", "level": null, "name": "house_price_prediction", "message": "Training xgboost"}
+{"timestamp": "2026-05-15T18:02:57.399283+00:00", "level": null, "name": "house_price_prediction", "message": "Error training xgboost: DataFrame.dtypes for data must be int, float, bool or category. When categorical type is supplied, the experimental DMatrix parameter`enable_categorical` must be set to `True`.  Invalid columns:condition: str"}
+{"timestamp": "2026-05-15T18:02:57.399484+00:00", "level": null, "name": "house_price_prediction", "message": "Training lightgbm"}
+{"timestamp": "2026-05-15T18:02:57.412285+00:00", "level": null, "name": "house_price_prediction", "message": "Error training lightgbm: pandas dtypes must be int, float or bool.\nFields with bad pandas dtypes: condition: str"}
+{"timestamp": "2026-05-15T18:02:57.412514+00:00", "level": null, "name": "house_price_prediction", "message": "Training catboost"}
+{"timestamp": "2026-05-15T18:02:57.464088+00:00", "level": null, "name": "house_price_prediction", "message": "Error training catboost: Bad value for num_feature[non_default_doc_idx=0,feature_idx=6]=\"good\": Cannot convert 'good' to float"}
+{"timestamp": "2026-05-15T18:02:57.464302+00:00", "level": null, "name": "house_price_prediction", "message": "Training random_forest"}
+{"timestamp": "2026-05-15T18:02:57.468136+00:00", "level": null, "name": "house_price_prediction", "message": "Error training random_forest: could not convert string to float: 'good'"}
+{"timestamp": "2026-05-15T18:02:57.468554+00:00", "level": null, "name": "house_price_prediction", "message": "Training gradient_boosting"}
+{"timestamp": "2026-05-15T18:02:57.472738+00:00", "level": null, "name": "house_price_prediction", "message": "Error training gradient_boosting: could not convert string to float: 'good'"}
+{"timestamp": "2026-05-15T18:02:57.474682+00:00", "level": null, "name": "house_price_prediction", "message": "\n================================================================================"}
+{"timestamp": "2026-05-15T18:02:57.475130+00:00", "level": null, "name": "house_price_prediction", "message": "ERROR IN TRAINING PIPELINE: max() iterable argument is empty"}
+{"timestamp": "2026-05-15T18:02:57.475259+00:00", "level": null, "name": "house_price_prediction", "message": "================================================================================"}
+{"timestamp": "2026-05-15T18:03:11.492213+00:00", "level": null, "name": "house_price_prediction", "message": "Logging system initialized", "log_level": "INFO", "log_file": "E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\logs\\logs\\app.log", "debug_mode": false}
+{"timestamp": "2026-05-15T18:03:15.381828+00:00", "level": null, "name": "house_price_prediction", "message": "================================================================================"}
+{"timestamp": "2026-05-15T18:03:15.382085+00:00", "level": null, "name": "house_price_prediction", "message": "HOUSE PRICE PREDICTION - TRAINING PIPELINE"}
+{"timestamp": "2026-05-15T18:03:15.382182+00:00", "level": null, "name": "house_price_prediction", "message": "================================================================================"}
+{"timestamp": "2026-05-15T18:03:15.382264+00:00", "level": null, "name": "house_price_prediction", "message": "\n[STEP 1] Loading data..."}
+{"timestamp": "2026-05-15T18:03:15.382428+00:00", "level": null, "name": "house_price_prediction", "message": "Loading data from E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\data\\train.csv"}
+{"timestamp": "2026-05-15T18:03:15.390729+00:00", "level": null, "name": "house_price_prediction", "message": "Training data loaded: (800, 8)"}
+{"timestamp": "2026-05-15T18:03:15.393998+00:00", "level": null, "name": "house_price_prediction", "message": "Data split: train (640, 8), test (160, 8)"}
+{"timestamp": "2026-05-15T18:03:15.395662+00:00", "level": null, "name": "house_price_prediction", "message": "\n[STEP 2] Preprocessing data..."}
+{"timestamp": "2026-05-15T18:03:15.396003+00:00", "level": null, "name": "house_price_prediction", "message": "AdvancedPreprocessor initialized"}
+{"timestamp": "2026-05-15T18:03:15.396795+00:00", "level": null, "name": "house_price_prediction", "message": "Starting data preprocessing pipeline"}
+{"timestamp": "2026-05-15T18:03:15.398116+00:00", "level": null, "name": "house_price_prediction", "message": "Identified 7 numeric and 1 categorical features"}
+{"timestamp": "2026-05-15T18:03:15.400485+00:00", "level": null, "name": "house_price_prediction", "message": "Missing values handled successfully"}
+{"timestamp": "2026-05-15T18:03:15.406276+00:00", "level": null, "name": "house_price_prediction", "message": "Found 3 outliers in square_feet, capping values"}
+{"timestamp": "2026-05-15T18:03:15.410116+00:00", "level": null, "name": "house_price_prediction", "message": "Found 56 outliers in bedrooms, capping values"}
+{"timestamp": "2026-05-15T18:03:15.415589+00:00", "level": null, "name": "house_price_prediction", "message": "Found 24 outliers in age, capping values"}
+{"timestamp": "2026-05-15T18:03:15.420742+00:00", "level": null, "name": "house_price_prediction", "message": "Found 306 outliers in garage, capping values"}
+{"timestamp": "2026-05-15T18:03:15.424840+00:00", "level": null, "name": "house_price_prediction", "message": "Found 3 outliers in location_score, capping values"}
+{"timestamp": "2026-05-15T18:03:15.427894+00:00", "level": null, "name": "house_price_prediction", "message": "Found 65 outliers in Price, capping values"}
+{"timestamp": "2026-05-15T18:03:15.433316+00:00", "level": null, "name": "house_price_prediction", "message": "Created 16 features through feature engineering"}
+{"timestamp": "2026-05-15T18:03:15.444880+00:00", "level": null, "name": "house_price_prediction", "message": "Features scaled using standard scaler"}
+{"timestamp": "2026-05-15T18:03:15.445175+00:00", "level": null, "name": "house_price_prediction", "message": "Preprocessing completed: {'original_shape': (640, 16), 'final_shape': (640, 15), 'numeric_features': 7, 'categorical_features': 1, 'feature_names': ['square_feet', 'bedrooms', 'bathrooms', 'age', 'garage', 'location_score', 'condition', 'square_feet_squared', 'square_feet_sqrt', 'bedrooms_squared', 'bedrooms_sqrt', 'bathrooms_squared', 'bathrooms_sqrt', 'square_feet_x_bedrooms', 'bedrooms_x_bathrooms']}"}
+{"timestamp": "2026-05-15T18:03:15.445311+00:00", "level": null, "name": "house_price_prediction", "message": "Transforming new data with fitted preprocessor"}
+{"timestamp": "2026-05-15T18:03:15.447701+00:00", "level": null, "name": "house_price_prediction", "message": "Missing values handled successfully"}
+{"timestamp": "2026-05-15T18:03:15.449882+00:00", "level": null, "name": "house_price_prediction", "message": "Found 1 outliers in square_feet, capping values"}
+{"timestamp": "2026-05-15T18:03:15.455678+00:00", "level": null, "name": "house_price_prediction", "message": "Found 14 outliers in bedrooms, capping values"}
+{"timestamp": "2026-05-15T18:03:15.459229+00:00", "level": null, "name": "house_price_prediction", "message": "Found 1 outliers in bathrooms, capping values"}
+{"timestamp": "2026-05-15T18:03:15.462346+00:00", "level": null, "name": "house_price_prediction", "message": "Found 10 outliers in age, capping values"}
+{"timestamp": "2026-05-15T18:03:15.465970+00:00", "level": null, "name": "house_price_prediction", "message": "Found 8 outliers in garage, capping values"}
+{"timestamp": "2026-05-15T18:03:15.478247+00:00", "level": null, "name": "house_price_prediction", "message": "Created 15 features through feature engineering"}
+{"timestamp": "2026-05-15T18:03:15.483653+00:00", "level": null, "name": "house_price_prediction", "message": "Features scaled using standard scaler"}
+{"timestamp": "2026-05-15T18:03:15.485371+00:00", "level": null, "name": "house_price_prediction", "message": "Data transformed successfully to shape (160, 15)"}
+{"timestamp": "2026-05-15T18:03:15.485900+00:00", "level": null, "name": "house_price_prediction", "message": "Preprocessing info: {'original_shape': (640, 16), 'final_shape': (640, 15), 'numeric_features': 7, 'categorical_features': 1, 'feature_names': ['square_feet', 'bedrooms', 'bathrooms', 'age', 'garage', 'location_score', 'condition', 'square_feet_squared', 'square_feet_sqrt', 'bedrooms_squared', 'bedrooms_sqrt', 'bathrooms_squared', 'bathrooms_sqrt', 'square_feet_x_bedrooms', 'bedrooms_x_bathrooms']}"}
+{"timestamp": "2026-05-15T18:03:15.486189+00:00", "level": null, "name": "house_price_prediction", "message": "\n[STEP 3] Training multiple models..."}
+{"timestamp": "2026-05-15T18:03:15.486339+00:00", "level": null, "name": "house_price_prediction", "message": "ModelTrainer initialized"}
+{"timestamp": "2026-05-15T18:03:15.486444+00:00", "level": null, "name": "house_price_prediction", "message": "Starting multi-model training"}
+{"timestamp": "2026-05-15T18:03:15.486549+00:00", "level": null, "name": "house_price_prediction", "message": "Building XGBoost model"}
+{"timestamp": "2026-05-15T18:03:15.486873+00:00", "level": null, "name": "house_price_prediction", "message": "Building LightGBM model"}
+{"timestamp": "2026-05-15T18:03:15.487062+00:00", "level": null, "name": "house_price_prediction", "message": "Building CatBoost model"}
+{"timestamp": "2026-05-15T18:03:15.487295+00:00", "level": null, "name": "house_price_prediction", "message": "Building Random Forest model"}
+{"timestamp": "2026-05-15T18:03:15.487422+00:00", "level": null, "name": "house_price_prediction", "message": "Building Gradient Boosting model"}
+{"timestamp": "2026-05-15T18:03:15.487525+00:00", "level": null, "name": "house_price_prediction", "message": "Training xgboost"}
+{"timestamp": "2026-05-15T18:03:16.721291+00:00", "level": null, "name": "house_price_prediction", "message": "Error training xgboost: DataFrame.dtypes for data must be int, float, bool or category. When categorical type is supplied, the experimental DMatrix parameter`enable_categorical` must be set to `True`.  Invalid columns:condition: str"}
+{"timestamp": "2026-05-15T18:03:16.721549+00:00", "level": null, "name": "house_price_prediction", "message": "Training lightgbm"}
+{"timestamp": "2026-05-15T18:03:16.725846+00:00", "level": null, "name": "house_price_prediction", "message": "Error training lightgbm: pandas dtypes must be int, float or bool.\nFields with bad pandas dtypes: condition: str"}
+{"timestamp": "2026-05-15T18:03:16.726070+00:00", "level": null, "name": "house_price_prediction", "message": "Training catboost"}
+{"timestamp": "2026-05-15T18:03:16.727422+00:00", "level": null, "name": "house_price_prediction", "message": "Error training catboost: Bad value for num_feature[non_default_doc_idx=0,feature_idx=6]=\"good\": Cannot convert 'good' to float"}
+{"timestamp": "2026-05-15T18:03:16.727601+00:00", "level": null, "name": "house_price_prediction", "message": "Training random_forest"}
+{"timestamp": "2026-05-15T18:03:16.730330+00:00", "level": null, "name": "house_price_prediction", "message": "Error training random_forest: could not convert string to float: 'good'"}
+{"timestamp": "2026-05-15T18:03:16.730612+00:00", "level": null, "name": "house_price_prediction", "message": "Training gradient_boosting"}
+{"timestamp": "2026-05-15T18:03:16.732242+00:00", "level": null, "name": "house_price_prediction", "message": "Error training gradient_boosting: could not convert string to float: 'good'"}
+{"timestamp": "2026-05-15T18:03:16.732504+00:00", "level": null, "name": "house_price_prediction", "message": "\n================================================================================"}
+{"timestamp": "2026-05-15T18:03:16.732579+00:00", "level": null, "name": "house_price_prediction", "message": "ERROR IN TRAINING PIPELINE: max() iterable argument is empty"}
+{"timestamp": "2026-05-15T18:03:16.732637+00:00", "level": null, "name": "house_price_prediction", "message": "================================================================================"}
+{"timestamp": "2026-05-15T18:04:49.376892+00:00", "level": null, "name": "house_price_prediction", "message": "Logging system initialized", "log_level": "INFO", "log_file": "E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\logs\\logs\\app.log", "debug_mode": true}
+{"timestamp": "2026-05-15T18:04:53.375217+00:00", "level": null, "name": "house_price_prediction", "message": "================================================================================"}
+{"timestamp": "2026-05-15T18:04:53.375652+00:00", "level": null, "name": "house_price_prediction", "message": "HOUSE PRICE PREDICTION - TRAINING PIPELINE"}
+{"timestamp": "2026-05-15T18:04:53.375998+00:00", "level": null, "name": "house_price_prediction", "message": "================================================================================"}
+{"timestamp": "2026-05-15T18:04:53.376695+00:00", "level": null, "name": "house_price_prediction", "message": "\n[STEP 1] Loading data..."}
+{"timestamp": "2026-05-15T18:04:53.377558+00:00", "level": null, "name": "house_price_prediction", "message": "Loading data from E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\data\\train.csv"}
+{"timestamp": "2026-05-15T18:04:53.384757+00:00", "level": null, "name": "house_price_prediction", "message": "Training data loaded: (800, 8)"}
+{"timestamp": "2026-05-15T18:04:53.388374+00:00", "level": null, "name": "house_price_prediction", "message": "Data split: train (640, 8), test (160, 8)"}
+{"timestamp": "2026-05-15T18:04:53.391351+00:00", "level": null, "name": "house_price_prediction", "message": "\n[STEP 2] Preprocessing data..."}
+{"timestamp": "2026-05-15T18:04:53.392014+00:00", "level": null, "name": "house_price_prediction", "message": "AdvancedPreprocessor initialized"}
+{"timestamp": "2026-05-15T18:04:53.393735+00:00", "level": null, "name": "house_price_prediction", "message": "Starting data preprocessing pipeline"}
+{"timestamp": "2026-05-15T18:04:53.395824+00:00", "level": null, "name": "house_price_prediction", "message": "Identified 7 numeric and 1 categorical features"}
+{"timestamp": "2026-05-15T18:04:53.399197+00:00", "level": null, "name": "house_price_prediction", "message": "Missing values handled successfully"}
+{"timestamp": "2026-05-15T18:04:53.403044+00:00", "level": null, "name": "house_price_prediction", "message": "Found 3 outliers in square_feet, capping values"}
+{"timestamp": "2026-05-15T18:04:53.407515+00:00", "level": null, "name": "house_price_prediction", "message": "Found 56 outliers in bedrooms, capping values"}
+{"timestamp": "2026-05-15T18:04:53.414388+00:00", "level": null, "name": "house_price_prediction", "message": "Found 24 outliers in age, capping values"}
+{"timestamp": "2026-05-15T18:04:53.420235+00:00", "level": null, "name": "house_price_prediction", "message": "Found 306 outliers in garage, capping values"}
+{"timestamp": "2026-05-15T18:04:53.424438+00:00", "level": null, "name": "house_price_prediction", "message": "Found 3 outliers in location_score, capping values"}
+{"timestamp": "2026-05-15T18:04:53.431021+00:00", "level": null, "name": "house_price_prediction", "message": "Found 65 outliers in Price, capping values"}
+{"timestamp": "2026-05-15T18:04:53.439152+00:00", "level": null, "name": "house_price_prediction", "message": "Created 16 features through feature engineering"}
+{"timestamp": "2026-05-15T18:04:53.455641+00:00", "level": null, "name": "house_price_prediction", "message": "Features scaled using standard scaler"}
+{"timestamp": "2026-05-15T18:04:53.456962+00:00", "level": null, "name": "house_price_prediction", "message": "Preprocessing completed: {'original_shape': (640, 16), 'final_shape': (640, 15), 'numeric_features': 7, 'categorical_features': 1, 'feature_names': ['square_feet', 'bedrooms', 'bathrooms', 'age', 'garage', 'location_score', 'condition', 'square_feet_squared', 'square_feet_sqrt', 'bedrooms_squared', 'bedrooms_sqrt', 'bathrooms_squared', 'bathrooms_sqrt', 'square_feet_x_bedrooms', 'bedrooms_x_bathrooms']}"}
+{"timestamp": "2026-05-15T18:04:53.457739+00:00", "level": null, "name": "house_price_prediction", "message": "Transforming new data with fitted preprocessor"}
+{"timestamp": "2026-05-15T18:04:53.461900+00:00", "level": null, "name": "house_price_prediction", "message": "Missing values handled successfully"}
+{"timestamp": "2026-05-15T18:04:53.467087+00:00", "level": null, "name": "house_price_prediction", "message": "Found 1 outliers in square_feet, capping values"}
+{"timestamp": "2026-05-15T18:04:53.477782+00:00", "level": null, "name": "house_price_prediction", "message": "Found 14 outliers in bedrooms, capping values"}
+{"timestamp": "2026-05-15T18:04:53.486184+00:00", "level": null, "name": "house_price_prediction", "message": "Found 1 outliers in bathrooms, capping values"}
+{"timestamp": "2026-05-15T18:04:53.492577+00:00", "level": null, "name": "house_price_prediction", "message": "Found 10 outliers in age, capping values"}
+{"timestamp": "2026-05-15T18:04:53.498910+00:00", "level": null, "name": "house_price_prediction", "message": "Found 8 outliers in garage, capping values"}
+{"timestamp": "2026-05-15T18:04:53.507669+00:00", "level": null, "name": "house_price_prediction", "message": "Created 15 features through feature engineering"}
+{"timestamp": "2026-05-15T18:04:53.515458+00:00", "level": null, "name": "house_price_prediction", "message": "Features scaled using standard scaler"}
+{"timestamp": "2026-05-15T18:04:53.518235+00:00", "level": null, "name": "house_price_prediction", "message": "Data transformed successfully to shape (160, 15)"}
+{"timestamp": "2026-05-15T18:04:53.518688+00:00", "level": null, "name": "house_price_prediction", "message": "Preprocessing info: {'original_shape': (640, 16), 'final_shape': (640, 15), 'numeric_features': 7, 'categorical_features': 1, 'feature_names': ['square_feet', 'bedrooms', 'bathrooms', 'age', 'garage', 'location_score', 'condition', 'square_feet_squared', 'square_feet_sqrt', 'bedrooms_squared', 'bedrooms_sqrt', 'bathrooms_squared', 'bathrooms_sqrt', 'square_feet_x_bedrooms', 'bedrooms_x_bathrooms']}"}
+{"timestamp": "2026-05-15T18:04:53.518994+00:00", "level": null, "name": "house_price_prediction", "message": "\n[STEP 3] Training multiple models..."}
+{"timestamp": "2026-05-15T18:04:53.519298+00:00", "level": null, "name": "house_price_prediction", "message": "ModelTrainer initialized"}
+{"timestamp": "2026-05-15T18:04:53.519614+00:00", "level": null, "name": "house_price_prediction", "message": "Starting multi-model training"}
+{"timestamp": "2026-05-15T18:04:53.519801+00:00", "level": null, "name": "house_price_prediction", "message": "Building XGBoost model"}
+{"timestamp": "2026-05-15T18:04:53.520105+00:00", "level": null, "name": "house_price_prediction", "message": "Building LightGBM model"}
+{"timestamp": "2026-05-15T18:04:53.520332+00:00", "level": null, "name": "house_price_prediction", "message": "Building CatBoost model"}
+{"timestamp": "2026-05-15T18:04:53.521031+00:00", "level": null, "name": "house_price_prediction", "message": "Building Random Forest model"}
+{"timestamp": "2026-05-15T18:04:53.521816+00:00", "level": null, "name": "house_price_prediction", "message": "Building Gradient Boosting model"}
+{"timestamp": "2026-05-15T18:04:53.522547+00:00", "level": null, "name": "house_price_prediction", "message": "Training xgboost"}
+{"timestamp": "2026-05-15T18:04:54.837815+00:00", "level": null, "name": "house_price_prediction", "message": "Error training xgboost: DataFrame.dtypes for data must be int, float, bool or category. When categorical type is supplied, the experimental DMatrix parameter`enable_categorical` must be set to `True`.  Invalid columns:condition: str"}
+{"timestamp": "2026-05-15T18:04:54.838478+00:00", "level": null, "name": "house_price_prediction", "message": "Training lightgbm"}
+{"timestamp": "2026-05-15T18:04:54.843415+00:00", "level": null, "name": "house_price_prediction", "message": "Error training lightgbm: pandas dtypes must be int, float or bool.\nFields with bad pandas dtypes: condition: str"}
+{"timestamp": "2026-05-15T18:04:54.843941+00:00", "level": null, "name": "house_price_prediction", "message": "Training catboost"}
+{"timestamp": "2026-05-15T18:04:54.847182+00:00", "level": null, "name": "house_price_prediction", "message": "Error training catboost: Bad value for num_feature[non_default_doc_idx=0,feature_idx=6]=\"good\": Cannot convert 'good' to float"}
+{"timestamp": "2026-05-15T18:04:54.847856+00:00", "level": null, "name": "house_price_prediction", "message": "Training random_forest"}
+{"timestamp": "2026-05-15T18:04:54.851587+00:00", "level": null, "name": "house_price_prediction", "message": "Error training random_forest: could not convert string to float: 'good'"}
+{"timestamp": "2026-05-15T18:04:54.852315+00:00", "level": null, "name": "house_price_prediction", "message": "Training gradient_boosting"}
+{"timestamp": "2026-05-15T18:04:54.855701+00:00", "level": null, "name": "house_price_prediction", "message": "Error training gradient_boosting: could not convert string to float: 'good'"}
+{"timestamp": "2026-05-15T18:04:54.856371+00:00", "level": null, "name": "house_price_prediction", "message": "\n================================================================================"}
+{"timestamp": "2026-05-15T18:04:54.856779+00:00", "level": null, "name": "house_price_prediction", "message": "ERROR IN TRAINING PIPELINE: max() iterable argument is empty"}
+{"timestamp": "2026-05-15T18:04:54.857094+00:00", "level": null, "name": "house_price_prediction", "message": "================================================================================"}
+{"timestamp": "2026-05-15T18:05:51.190520+00:00", "level": null, "name": "house_price_prediction", "message": "Logging system initialized", "log_level": "INFO", "log_file": "E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\logs\\logs\\app.log", "debug_mode": true}
+{"timestamp": "2026-05-15T18:05:55.123145+00:00", "level": null, "name": "house_price_prediction", "message": "================================================================================"}
+{"timestamp": "2026-05-15T18:05:55.123754+00:00", "level": null, "name": "house_price_prediction", "message": "HOUSE PRICE PREDICTION - TRAINING PIPELINE"}
+{"timestamp": "2026-05-15T18:05:55.124166+00:00", "level": null, "name": "house_price_prediction", "message": "================================================================================"}
+{"timestamp": "2026-05-15T18:05:55.124604+00:00", "level": null, "name": "house_price_prediction", "message": "\n[STEP 1] Loading data..."}
+{"timestamp": "2026-05-15T18:05:55.125152+00:00", "level": null, "name": "house_price_prediction", "message": "Loading data from E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\data\\train.csv"}
+{"timestamp": "2026-05-15T18:05:55.134620+00:00", "level": null, "name": "house_price_prediction", "message": "Training data loaded: (800, 8)"}
+{"timestamp": "2026-05-15T18:05:55.138629+00:00", "level": null, "name": "house_price_prediction", "message": "Data split: train (640, 8), test (160, 8)"}
+{"timestamp": "2026-05-15T18:05:55.142112+00:00", "level": null, "name": "house_price_prediction", "message": "\n[STEP 2] Preprocessing data..."}
+{"timestamp": "2026-05-15T18:05:55.146132+00:00", "level": null, "name": "house_price_prediction", "message": "AdvancedPreprocessor initialized"}
+{"timestamp": "2026-05-15T18:05:55.148048+00:00", "level": null, "name": "house_price_prediction", "message": "Starting data preprocessing pipeline"}
+{"timestamp": "2026-05-15T18:05:55.150088+00:00", "level": null, "name": "house_price_prediction", "message": "Identified 7 numeric and 1 categorical features"}
+{"timestamp": "2026-05-15T18:05:55.153164+00:00", "level": null, "name": "house_price_prediction", "message": "Missing values handled successfully"}
+{"timestamp": "2026-05-15T18:05:55.157087+00:00", "level": null, "name": "house_price_prediction", "message": "Found 3 outliers in square_feet, capping values"}
+{"timestamp": "2026-05-15T18:05:55.163700+00:00", "level": null, "name": "house_price_prediction", "message": "Found 56 outliers in bedrooms, capping values"}
+{"timestamp": "2026-05-15T18:05:55.170641+00:00", "level": null, "name": "house_price_prediction", "message": "Found 24 outliers in age, capping values"}
+{"timestamp": "2026-05-15T18:05:55.175745+00:00", "level": null, "name": "house_price_prediction", "message": "Found 306 outliers in garage, capping values"}
+{"timestamp": "2026-05-15T18:05:55.179917+00:00", "level": null, "name": "house_price_prediction", "message": "Found 3 outliers in location_score, capping values"}
+{"timestamp": "2026-05-15T18:05:55.185683+00:00", "level": null, "name": "house_price_prediction", "message": "Found 65 outliers in Price, capping values"}
+{"timestamp": "2026-05-15T18:05:55.200628+00:00", "level": null, "name": "house_price_prediction", "message": "Created 16 features through feature engineering"}
+{"timestamp": "2026-05-15T18:05:55.214330+00:00", "level": null, "name": "house_price_prediction", "message": "Features scaled using standard scaler"}
+{"timestamp": "2026-05-15T18:05:55.214977+00:00", "level": null, "name": "house_price_prediction", "message": "Preprocessing completed: {'original_shape': (640, 16), 'final_shape': (640, 15), 'numeric_features': 7, 'categorical_features': 1, 'feature_names': ['square_feet', 'bedrooms', 'bathrooms', 'age', 'garage', 'location_score', 'condition', 'square_feet_squared', 'square_feet_sqrt', 'bedrooms_squared', 'bedrooms_sqrt', 'bathrooms_squared', 'bathrooms_sqrt', 'square_feet_x_bedrooms', 'bedrooms_x_bathrooms']}"}
+{"timestamp": "2026-05-15T18:05:55.215712+00:00", "level": null, "name": "house_price_prediction", "message": "Transforming new data with fitted preprocessor"}
+{"timestamp": "2026-05-15T18:05:55.218623+00:00", "level": null, "name": "house_price_prediction", "message": "Missing values handled successfully"}
+{"timestamp": "2026-05-15T18:05:55.223401+00:00", "level": null, "name": "house_price_prediction", "message": "Found 1 outliers in square_feet, capping values"}
+{"timestamp": "2026-05-15T18:05:55.229217+00:00", "level": null, "name": "house_price_prediction", "message": "Found 14 outliers in bedrooms, capping values"}
+{"timestamp": "2026-05-15T18:05:55.233917+00:00", "level": null, "name": "house_price_prediction", "message": "Found 1 outliers in bathrooms, capping values"}
+{"timestamp": "2026-05-15T18:05:55.240162+00:00", "level": null, "name": "house_price_prediction", "message": "Found 10 outliers in age, capping values"}
+{"timestamp": "2026-05-15T18:05:55.246219+00:00", "level": null, "name": "house_price_prediction", "message": "Found 8 outliers in garage, capping values"}
+{"timestamp": "2026-05-15T18:05:55.261264+00:00", "level": null, "name": "house_price_prediction", "message": "Created 15 features through feature engineering"}
+{"timestamp": "2026-05-15T18:05:55.267423+00:00", "level": null, "name": "house_price_prediction", "message": "Features scaled using standard scaler"}
+{"timestamp": "2026-05-15T18:05:55.269858+00:00", "level": null, "name": "house_price_prediction", "message": "Data transformed successfully to shape (160, 15)"}
+{"timestamp": "2026-05-15T18:05:55.270344+00:00", "level": null, "name": "house_price_prediction", "message": "Preprocessing info: {'original_shape': (640, 16), 'final_shape': (640, 15), 'numeric_features': 7, 'categorical_features': 1, 'feature_names': ['square_feet', 'bedrooms', 'bathrooms', 'age', 'garage', 'location_score', 'condition', 'square_feet_squared', 'square_feet_sqrt', 'bedrooms_squared', 'bedrooms_sqrt', 'bathrooms_squared', 'bathrooms_sqrt', 'square_feet_x_bedrooms', 'bedrooms_x_bathrooms']}"}
+{"timestamp": "2026-05-15T18:05:55.271018+00:00", "level": null, "name": "house_price_prediction", "message": "\n[STEP 3] Training multiple models..."}
+{"timestamp": "2026-05-15T18:05:55.271540+00:00", "level": null, "name": "house_price_prediction", "message": "ModelTrainer initialized"}
+{"timestamp": "2026-05-15T18:05:55.271995+00:00", "level": null, "name": "house_price_prediction", "message": "Starting multi-model training"}
+{"timestamp": "2026-05-15T18:05:55.272485+00:00", "level": null, "name": "house_price_prediction", "message": "Building XGBoost model"}
+{"timestamp": "2026-05-15T18:05:55.273043+00:00", "level": null, "name": "house_price_prediction", "message": "Building LightGBM model"}
+{"timestamp": "2026-05-15T18:05:55.273570+00:00", "level": null, "name": "house_price_prediction", "message": "Building CatBoost model"}
+{"timestamp": "2026-05-15T18:05:55.274181+00:00", "level": null, "name": "house_price_prediction", "message": "Building Random Forest model"}
+{"timestamp": "2026-05-15T18:05:55.274711+00:00", "level": null, "name": "house_price_prediction", "message": "Building Gradient Boosting model"}
+{"timestamp": "2026-05-15T18:05:55.275162+00:00", "level": null, "name": "house_price_prediction", "message": "Training xgboost"}
+{"timestamp": "2026-05-15T18:05:56.615699+00:00", "level": null, "name": "house_price_prediction", "message": "Error training xgboost: DataFrame.dtypes for data must be int, float, bool or category. When categorical type is supplied, the experimental DMatrix parameter`enable_categorical` must be set to `True`.  Invalid columns:condition: str"}
+{"timestamp": "2026-05-15T18:05:56.616278+00:00", "level": null, "name": "house_price_prediction", "message": "Training lightgbm"}
+{"timestamp": "2026-05-15T18:05:56.621399+00:00", "level": null, "name": "house_price_prediction", "message": "Error training lightgbm: pandas dtypes must be int, float or bool.\nFields with bad pandas dtypes: condition: str"}
+{"timestamp": "2026-05-15T18:05:56.622036+00:00", "level": null, "name": "house_price_prediction", "message": "Training catboost"}
+{"timestamp": "2026-05-15T18:05:56.624328+00:00", "level": null, "name": "house_price_prediction", "message": "Error training catboost: Bad value for num_feature[non_default_doc_idx=0,feature_idx=6]=\"good\": Cannot convert 'good' to float"}
+{"timestamp": "2026-05-15T18:05:56.624782+00:00", "level": null, "name": "house_price_prediction", "message": "Training random_forest"}
+{"timestamp": "2026-05-15T18:05:56.629414+00:00", "level": null, "name": "house_price_prediction", "message": "Error training random_forest: could not convert string to float: 'good'"}
+{"timestamp": "2026-05-15T18:05:56.630090+00:00", "level": null, "name": "house_price_prediction", "message": "Training gradient_boosting"}
+{"timestamp": "2026-05-15T18:05:56.633432+00:00", "level": null, "name": "house_price_prediction", "message": "Error training gradient_boosting: could not convert string to float: 'good'"}
+{"timestamp": "2026-05-15T18:05:56.634160+00:00", "level": null, "name": "house_price_prediction", "message": "\n================================================================================"}
+{"timestamp": "2026-05-15T18:05:56.634540+00:00", "level": null, "name": "house_price_prediction", "message": "ERROR IN TRAINING PIPELINE: max() iterable argument is empty"}
+{"timestamp": "2026-05-15T18:05:56.634823+00:00", "level": null, "name": "house_price_prediction", "message": "================================================================================"}
+{"timestamp": "2026-05-15T18:06:41.647220+00:00", "level": null, "name": "house_price_prediction", "message": "Logging system initialized", "log_level": "INFO", "log_file": "E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\logs\\logs\\app.log", "debug_mode": true}
+{"timestamp": "2026-05-15T18:06:45.613068+00:00", "level": null, "name": "house_price_prediction", "message": "================================================================================"}
+{"timestamp": "2026-05-15T18:06:45.613506+00:00", "level": null, "name": "house_price_prediction", "message": "HOUSE PRICE PREDICTION - TRAINING PIPELINE"}
+{"timestamp": "2026-05-15T18:06:45.613949+00:00", "level": null, "name": "house_price_prediction", "message": "================================================================================"}
+{"timestamp": "2026-05-15T18:06:45.614225+00:00", "level": null, "name": "house_price_prediction", "message": "\n[STEP 1] Loading data..."}
+{"timestamp": "2026-05-15T18:06:45.614644+00:00", "level": null, "name": "house_price_prediction", "message": "Loading data from E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\data\\train.csv"}
+{"timestamp": "2026-05-15T18:06:45.620595+00:00", "level": null, "name": "house_price_prediction", "message": "Training data loaded: (800, 8)"}
+{"timestamp": "2026-05-15T18:06:45.625593+00:00", "level": null, "name": "house_price_prediction", "message": "Data split: train (640, 8), test (160, 8)"}
+{"timestamp": "2026-05-15T18:06:45.628909+00:00", "level": null, "name": "house_price_prediction", "message": "\n[STEP 2] Preprocessing data..."}
+{"timestamp": "2026-05-15T18:06:45.629350+00:00", "level": null, "name": "house_price_prediction", "message": "AdvancedPreprocessor initialized"}
+{"timestamp": "2026-05-15T18:06:45.630665+00:00", "level": null, "name": "house_price_prediction", "message": "Starting data preprocessing pipeline"}
+{"timestamp": "2026-05-15T18:06:45.633374+00:00", "level": null, "name": "house_price_prediction", "message": "Identified 7 numeric and 1 categorical features"}
+{"timestamp": "2026-05-15T18:06:45.636632+00:00", "level": null, "name": "house_price_prediction", "message": "Missing values handled successfully"}
+{"timestamp": "2026-05-15T18:06:45.640939+00:00", "level": null, "name": "house_price_prediction", "message": "Found 3 outliers in square_feet, capping values"}
+{"timestamp": "2026-05-15T18:06:45.645945+00:00", "level": null, "name": "house_price_prediction", "message": "Found 56 outliers in bedrooms, capping values"}
+{"timestamp": "2026-05-15T18:06:45.652688+00:00", "level": null, "name": "house_price_prediction", "message": "Found 24 outliers in age, capping values"}
+{"timestamp": "2026-05-15T18:06:45.656675+00:00", "level": null, "name": "house_price_prediction", "message": "Found 306 outliers in garage, capping values"}
+{"timestamp": "2026-05-15T18:06:45.661858+00:00", "level": null, "name": "house_price_prediction", "message": "Found 3 outliers in location_score, capping values"}
+{"timestamp": "2026-05-15T18:06:45.666073+00:00", "level": null, "name": "house_price_prediction", "message": "Found 65 outliers in Price, capping values"}
+{"timestamp": "2026-05-15T18:06:45.675489+00:00", "level": null, "name": "house_price_prediction", "message": "Created 16 features through feature engineering"}
+{"timestamp": "2026-05-15T18:06:45.694787+00:00", "level": null, "name": "house_price_prediction", "message": "Features scaled using standard scaler"}
+{"timestamp": "2026-05-15T18:06:45.695538+00:00", "level": null, "name": "house_price_prediction", "message": "Preprocessing completed: {'original_shape': (640, 16), 'final_shape': (640, 15), 'numeric_features': 7, 'categorical_features': 1, 'feature_names': ['square_feet', 'bedrooms', 'bathrooms', 'age', 'garage', 'location_score', 'condition', 'square_feet_squared', 'square_feet_sqrt', 'bedrooms_squared', 'bedrooms_sqrt', 'bathrooms_squared', 'bathrooms_sqrt', 'square_feet_x_bedrooms', 'bedrooms_x_bathrooms']}"}
+{"timestamp": "2026-05-15T18:06:45.696179+00:00", "level": null, "name": "house_price_prediction", "message": "Transforming new data with fitted preprocessor"}
+{"timestamp": "2026-05-15T18:06:45.698801+00:00", "level": null, "name": "house_price_prediction", "message": "Missing values handled successfully"}
+{"timestamp": "2026-05-15T18:06:45.701441+00:00", "level": null, "name": "house_price_prediction", "message": "Found 1 outliers in square_feet, capping values"}
+{"timestamp": "2026-05-15T18:06:45.706340+00:00", "level": null, "name": "house_price_prediction", "message": "Found 14 outliers in bedrooms, capping values"}
+{"timestamp": "2026-05-15T18:06:45.712061+00:00", "level": null, "name": "house_price_prediction", "message": "Found 1 outliers in bathrooms, capping values"}
+{"timestamp": "2026-05-15T18:06:45.715831+00:00", "level": null, "name": "house_price_prediction", "message": "Found 10 outliers in age, capping values"}
+{"timestamp": "2026-05-15T18:06:45.719609+00:00", "level": null, "name": "house_price_prediction", "message": "Found 8 outliers in garage, capping values"}
+{"timestamp": "2026-05-15T18:06:45.729860+00:00", "level": null, "name": "house_price_prediction", "message": "Created 15 features through feature engineering"}
+{"timestamp": "2026-05-15T18:06:45.736613+00:00", "level": null, "name": "house_price_prediction", "message": "Features scaled using standard scaler"}
+{"timestamp": "2026-05-15T18:06:45.740725+00:00", "level": null, "name": "house_price_prediction", "message": "Data transformed successfully to shape (160, 15)"}
+{"timestamp": "2026-05-15T18:06:45.741385+00:00", "level": null, "name": "house_price_prediction", "message": "Preprocessing info: {'original_shape': (640, 16), 'final_shape': (640, 15), 'numeric_features': 7, 'categorical_features': 1, 'feature_names': ['square_feet', 'bedrooms', 'bathrooms', 'age', 'garage', 'location_score', 'condition', 'square_feet_squared', 'square_feet_sqrt', 'bedrooms_squared', 'bedrooms_sqrt', 'bathrooms_squared', 'bathrooms_sqrt', 'square_feet_x_bedrooms', 'bedrooms_x_bathrooms']}"}
+{"timestamp": "2026-05-15T18:06:45.741902+00:00", "level": null, "name": "house_price_prediction", "message": "\n[STEP 3] Training multiple models..."}
+{"timestamp": "2026-05-15T18:06:45.742325+00:00", "level": null, "name": "house_price_prediction", "message": "ModelTrainer initialized"}
+{"timestamp": "2026-05-15T18:06:45.742585+00:00", "level": null, "name": "house_price_prediction", "message": "Starting multi-model training"}
+{"timestamp": "2026-05-15T18:06:45.742980+00:00", "level": null, "name": "house_price_prediction", "message": "Building XGBoost model"}
+{"timestamp": "2026-05-15T18:06:45.743510+00:00", "level": null, "name": "house_price_prediction", "message": "Building LightGBM model"}
+{"timestamp": "2026-05-15T18:06:45.743873+00:00", "level": null, "name": "house_price_prediction", "message": "Building CatBoost model"}
+{"timestamp": "2026-05-15T18:06:45.744717+00:00", "level": null, "name": "house_price_prediction", "message": "Building Random Forest model"}
+{"timestamp": "2026-05-15T18:06:45.745221+00:00", "level": null, "name": "house_price_prediction", "message": "Building Gradient Boosting model"}
+{"timestamp": "2026-05-15T18:06:45.745674+00:00", "level": null, "name": "house_price_prediction", "message": "Training xgboost"}
+{"timestamp": "2026-05-15T18:06:58.012923+00:00", "level": null, "name": "house_price_prediction", "message": "xgboost CV R\u00b2 Score: 0.6524"}
+{"timestamp": "2026-05-15T18:06:58.031779+00:00", "level": null, "name": "house_price_prediction", "message": "Training lightgbm"}
+{"timestamp": "2026-05-15T18:07:05.717931+00:00", "level": null, "name": "house_price_prediction", "message": "lightgbm CV R\u00b2 Score: 0.6603"}
+{"timestamp": "2026-05-15T18:07:05.718822+00:00", "level": null, "name": "house_price_prediction", "message": "Training catboost"}
+{"timestamp": "2026-05-15T18:07:15.970032+00:00", "level": null, "name": "house_price_prediction", "message": "catboost CV R\u00b2 Score: 0.6831"}
+{"timestamp": "2026-05-15T18:07:15.972340+00:00", "level": null, "name": "house_price_prediction", "message": "Training random_forest"}
+{"timestamp": "2026-05-15T18:07:20.203202+00:00", "level": null, "name": "house_price_prediction", "message": "random_forest CV R\u00b2 Score: 0.6703"}
+{"timestamp": "2026-05-15T18:07:20.204007+00:00", "level": null, "name": "house_price_prediction", "message": "Training gradient_boosting"}
+{"timestamp": "2026-05-15T18:07:21.442056+00:00", "level": null, "name": "house_price_prediction", "message": "gradient_boosting CV R\u00b2 Score: 0.6534"}
+{"timestamp": "2026-05-15T18:07:21.445377+00:00", "level": null, "name": "house_price_prediction", "message": "Best model selected: catboost with CV R\u00b2 Score: 0.6831"}
+{"timestamp": "2026-05-15T18:07:21.446702+00:00", "level": null, "name": "house_price_prediction", "message": "\nCross-validation scores:"}
+{"timestamp": "2026-05-15T18:07:21.447670+00:00", "level": null, "name": "house_price_prediction", "message": "  catboost: 0.6831"}
+{"timestamp": "2026-05-15T18:07:21.449024+00:00", "level": null, "name": "house_price_prediction", "message": "  random_forest: 0.6703"}
+{"timestamp": "2026-05-15T18:07:21.449939+00:00", "level": null, "name": "house_price_prediction", "message": "  lightgbm: 0.6603"}
+{"timestamp": "2026-05-15T18:07:21.450729+00:00", "level": null, "name": "house_price_prediction", "message": "  gradient_boosting: 0.6534"}
+{"timestamp": "2026-05-15T18:07:21.451307+00:00", "level": null, "name": "house_price_prediction", "message": "  xgboost: 0.6524"}
+{"timestamp": "2026-05-15T18:07:21.451745+00:00", "level": null, "name": "house_price_prediction", "message": "\n[STEP 4] Evaluating on test set..."}
+{"timestamp": "2026-05-15T18:07:21.452878+00:00", "level": null, "name": "house_price_prediction", "message": "Evaluating models on test set"}
+{"timestamp": "2026-05-15T18:07:21.524333+00:00", "level": null, "name": "house_price_prediction", "message": "xgboost Test R\u00b2 Score: 0.5787"}
+{"timestamp": "2026-05-15T18:07:21.535597+00:00", "level": null, "name": "house_price_prediction", "message": "lightgbm Test R\u00b2 Score: 0.5866"}
+{"timestamp": "2026-05-15T18:07:21.549809+00:00", "level": null, "name": "house_price_prediction", "message": "catboost Test R\u00b2 Score: 0.5878"}
+{"timestamp": "2026-05-15T18:07:21.660418+00:00", "level": null, "name": "house_price_prediction", "message": "random_forest Test R\u00b2 Score: 0.5323"}
+{"timestamp": "2026-05-15T18:07:21.664457+00:00", "level": null, "name": "house_price_prediction", "message": "gradient_boosting Test R\u00b2 Score: 0.5665"}
+{"timestamp": "2026-05-15T18:07:21.664779+00:00", "level": null, "name": "house_price_prediction", "message": "\nTest set evaluation:"}
+{"timestamp": "2026-05-15T18:07:21.664918+00:00", "level": null, "name": "house_price_prediction", "message": "  xgboost:"}
+{"timestamp": "2026-05-15T18:07:21.665030+00:00", "level": null, "name": "house_price_prediction", "message": "    R\u00b2 Score: 0.5787"}
+{"timestamp": "2026-05-15T18:07:21.665152+00:00", "level": null, "name": "house_price_prediction", "message": "    RMSE: $35004.70"}
+{"timestamp": "2026-05-15T18:07:21.665298+00:00", "level": null, "name": "house_price_prediction", "message": "    MAE: $20503.13"}
+{"timestamp": "2026-05-15T18:07:21.665555+00:00", "level": null, "name": "house_price_prediction", "message": "  lightgbm:"}
+{"timestamp": "2026-05-15T18:07:21.665793+00:00", "level": null, "name": "house_price_prediction", "message": "    R\u00b2 Score: 0.5866"}
+{"timestamp": "2026-05-15T18:07:21.665946+00:00", "level": null, "name": "house_price_prediction", "message": "    RMSE: $34673.24"}
+{"timestamp": "2026-05-15T18:07:21.666079+00:00", "level": null, "name": "house_price_prediction", "message": "    MAE: $21412.23"}
+{"timestamp": "2026-05-15T18:07:21.666250+00:00", "level": null, "name": "house_price_prediction", "message": "  catboost:"}
+{"timestamp": "2026-05-15T18:07:21.666370+00:00", "level": null, "name": "house_price_prediction", "message": "    R\u00b2 Score: 0.5878"}
+{"timestamp": "2026-05-15T18:07:21.666488+00:00", "level": null, "name": "house_price_prediction", "message": "    RMSE: $34622.89"}
+{"timestamp": "2026-05-15T18:07:21.666594+00:00", "level": null, "name": "house_price_prediction", "message": "    MAE: $20400.15"}
+{"timestamp": "2026-05-15T18:07:21.666699+00:00", "level": null, "name": "house_price_prediction", "message": "  random_forest:"}
+{"timestamp": "2026-05-15T18:07:21.666829+00:00", "level": null, "name": "house_price_prediction", "message": "    R\u00b2 Score: 0.5323"}
+{"timestamp": "2026-05-15T18:07:21.666947+00:00", "level": null, "name": "house_price_prediction", "message": "    RMSE: $36882.61"}
+{"timestamp": "2026-05-15T18:07:21.667085+00:00", "level": null, "name": "house_price_prediction", "message": "    MAE: $21425.68"}
+{"timestamp": "2026-05-15T18:07:21.667200+00:00", "level": null, "name": "house_price_prediction", "message": "  gradient_boosting:"}
+{"timestamp": "2026-05-15T18:07:21.667329+00:00", "level": null, "name": "house_price_prediction", "message": "    R\u00b2 Score: 0.5665"}
+{"timestamp": "2026-05-15T18:07:21.667448+00:00", "level": null, "name": "house_price_prediction", "message": "    RMSE: $35505.40"}
+{"timestamp": "2026-05-15T18:07:21.667686+00:00", "level": null, "name": "house_price_prediction", "message": "    MAE: $20958.66"}
+{"timestamp": "2026-05-15T18:07:21.667868+00:00", "level": null, "name": "house_price_prediction", "message": "\n[STEP 5] Saving models and preprocessor..."}
+{"timestamp": "2026-05-15T18:07:21.668967+00:00", "level": null, "name": "house_price_prediction", "message": "Saving all trained models"}
+{"timestamp": "2026-05-15T18:07:21.683211+00:00", "level": null, "name": "house_price_prediction", "message": "Model saved successfully to E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\xgboost_model.pkl"}
+{"timestamp": "2026-05-15T18:07:21.691890+00:00", "level": null, "name": "house_price_prediction", "message": "Model saved successfully to E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\lightgbm_model.pkl"}
+{"timestamp": "2026-05-15T18:07:21.697789+00:00", "level": null, "name": "house_price_prediction", "message": "Model saved successfully to E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\catboost_model.pkl"}
+{"timestamp": "2026-05-15T18:07:21.712962+00:00", "level": null, "name": "house_price_prediction", "message": "Model saved successfully to E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\random_forest_model.pkl"}
+{"timestamp": "2026-05-15T18:07:21.725020+00:00", "level": null, "name": "house_price_prediction", "message": "Model saved successfully to E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\gradient_boosting_model.pkl"}
+{"timestamp": "2026-05-15T18:07:21.730076+00:00", "level": null, "name": "house_price_prediction", "message": "Model saved successfully to E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\best_model.pkl"}
+{"timestamp": "2026-05-15T18:07:21.733845+00:00", "level": null, "name": "house_price_prediction", "message": "Model saved successfully to E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\preprocessor.pkl"}
+{"timestamp": "2026-05-15T18:07:21.734480+00:00", "level": null, "name": "house_price_prediction", "message": "Models saved to E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models"}
+{"timestamp": "2026-05-15T18:07:21.734712+00:00", "level": null, "name": "house_price_prediction", "message": "\n[STEP 6] Generating predictions..."}
+{"timestamp": "2026-05-15T18:07:21.738327+00:00", "level": null, "name": "house_price_prediction", "message": "Prediction successful for 160 samples"}
+{"timestamp": "2026-05-15T18:07:21.741256+00:00", "level": null, "name": "house_price_prediction", "message": "\nBest model performance:"}
+{"timestamp": "2026-05-15T18:07:21.741799+00:00", "level": null, "name": "house_price_prediction", "message": "  R\u00b2 Score: 0.5878"}
+{"timestamp": "2026-05-15T18:07:21.742031+00:00", "level": null, "name": "house_price_prediction", "message": "  RMSE: $34622.89"}
+{"timestamp": "2026-05-15T18:07:21.742233+00:00", "level": null, "name": "house_price_prediction", "message": "  MAE: $20400.15"}
+{"timestamp": "2026-05-15T18:07:21.742390+00:00", "level": null, "name": "house_price_prediction", "message": "  MAPE: 5.16%"}
+{"timestamp": "2026-05-15T18:07:21.742596+00:00", "level": null, "name": "house_price_prediction", "message": "\n[STEP 7] Feature importance analysis..."}
+{"timestamp": "2026-05-15T18:07:21.743577+00:00", "level": null, "name": "house_price_prediction", "message": "Top 10 important features:"}
+{"timestamp": "2026-05-15T18:07:21.744005+00:00", "level": null, "name": "house_price_prediction", "message": "  feature_6: 41.7106"}
+{"timestamp": "2026-05-15T18:07:21.744214+00:00", "level": null, "name": "house_price_prediction", "message": "  feature_13: 22.8556"}
+{"timestamp": "2026-05-15T18:07:21.744376+00:00", "level": null, "name": "house_price_prediction", "message": "  feature_5: 9.2806"}
+{"timestamp": "2026-05-15T18:07:21.744677+00:00", "level": null, "name": "house_price_prediction", "message": "  feature_0: 4.1947"}
+{"timestamp": "2026-05-15T18:07:21.745022+00:00", "level": null, "name": "house_price_prediction", "message": "  feature_8: 4.1417"}
+{"timestamp": "2026-05-15T18:07:21.745332+00:00", "level": null, "name": "house_price_prediction", "message": "  feature_7: 3.7639"}
+{"timestamp": "2026-05-15T18:07:21.745682+00:00", "level": null, "name": "house_price_prediction", "message": "  feature_3: 3.4011"}
+{"timestamp": "2026-05-15T18:07:21.745878+00:00", "level": null, "name": "house_price_prediction", "message": "  feature_12: 2.1531"}
+{"timestamp": "2026-05-15T18:07:21.746035+00:00", "level": null, "name": "house_price_prediction", "message": "  feature_11: 2.0242"}
+{"timestamp": "2026-05-15T18:07:21.746196+00:00", "level": null, "name": "house_price_prediction", "message": "  feature_9: 1.5885"}
+{"timestamp": "2026-05-15T18:07:21.746358+00:00", "level": null, "name": "house_price_prediction", "message": "\n================================================================================"}
+{"timestamp": "2026-05-15T18:07:21.746786+00:00", "level": null, "name": "house_price_prediction", "message": "TRAINING PIPELINE COMPLETED SUCCESSFULLY!"}
+{"timestamp": "2026-05-15T18:07:21.747109+00:00", "level": null, "name": "house_price_prediction", "message": "================================================================================"}
+{"timestamp": "2026-05-15T18:23:19.033282+00:00", "level": null, "name": "house_price_prediction", "message": "Logging system initialized", "log_level": "INFO", "log_file": "E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\logs\\logs\\app.log", "debug_mode": false}
+{"timestamp": "2026-05-15T18:23:21.126532+00:00", "level": null, "name": "house_price_prediction", "message": "Logging system initialized", "log_level": "INFO", "log_file": "E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\logs\\logs\\app.log", "debug_mode": false}
+{"timestamp": "2026-05-15T18:23:21.180673+00:00", "level": null, "name": "house_price_prediction", "message": "Loading models on startup"}
+{"timestamp": "2026-05-15T18:23:21.180984+00:00", "level": null, "name": "house_price_prediction", "message": "Error loading model: [Errno 2] No such file or directory: 'E:\\\\ProjectsGithub\\\\Data Science Internship\\\\Task-4-Full-DS-Project\\\\models\\\\models\\\\house_price_model.pkl'"}
+{"timestamp": "2026-05-15T18:23:21.181062+00:00", "level": null, "name": "house_price_prediction", "message": "Error loading models: [Errno 2] No such file or directory: 'E:\\\\ProjectsGithub\\\\Data Science Internship\\\\Task-4-Full-DS-Project\\\\models\\\\models\\\\house_price_model.pkl'"}
+{"timestamp": "2026-05-15T18:23:21.181108+00:00", "level": null, "name": "house_price_prediction", "message": "Models will need to be trained before making predictions"}
+{"timestamp": "2026-05-15T18:23:21.181151+00:00", "level": null, "name": "house_price_prediction", "message": "FastAPI application started"}
+{"timestamp": "2026-05-15T18:24:41.477967+00:00", "level": null, "name": "house_price_prediction", "message": "FastAPI application shutting down"}
+{"timestamp": "2026-05-15T18:24:44.524210+00:00", "level": null, "name": "house_price_prediction", "message": "Logging system initialized", "log_level": "INFO", "log_file": "E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\logs\\logs\\app.log", "debug_mode": false}
+{"timestamp": "2026-05-15T18:24:44.614020+00:00", "level": null, "name": "house_price_prediction", "message": "Loading models on startup"}
+{"timestamp": "2026-05-15T18:24:44.614727+00:00", "level": null, "name": "house_price_prediction", "message": "Error loading model: [Errno 2] No such file or directory: 'E:\\\\ProjectsGithub\\\\Data Science Internship\\\\Task-4-Full-DS-Project\\\\models\\\\models\\\\house_price_model.pkl'"}
+{"timestamp": "2026-05-15T18:24:44.614898+00:00", "level": null, "name": "house_price_prediction", "message": "Error loading models: [Errno 2] No such file or directory: 'E:\\\\ProjectsGithub\\\\Data Science Internship\\\\Task-4-Full-DS-Project\\\\models\\\\models\\\\house_price_model.pkl'"}
+{"timestamp": "2026-05-15T18:24:44.615061+00:00", "level": null, "name": "house_price_prediction", "message": "Models will need to be trained before making predictions"}
+{"timestamp": "2026-05-15T18:24:44.615160+00:00", "level": null, "name": "house_price_prediction", "message": "FastAPI application started"}
+{"timestamp": "2026-05-15T18:26:58.748227+00:00", "level": null, "name": "house_price_prediction", "message": "FastAPI application shutting down"}
+{"timestamp": "2026-05-15T18:27:01.673939+00:00", "level": null, "name": "house_price_prediction", "message": "Logging system initialized", "log_level": "INFO", "log_file": "E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\logs\\logs\\app.log", "debug_mode": false}
+{"timestamp": "2026-05-15T18:27:01.749891+00:00", "level": null, "name": "house_price_prediction", "message": "Loading models on startup"}
+{"timestamp": "2026-05-15T18:27:01.750274+00:00", "level": null, "name": "house_price_prediction", "message": "Error loading model: [Errno 2] No such file or directory: 'E:\\\\ProjectsGithub\\\\Data Science Internship\\\\Task-4-Full-DS-Project\\\\models\\\\models\\\\house_price_model.pkl'"}
+{"timestamp": "2026-05-15T18:27:01.750400+00:00", "level": null, "name": "house_price_prediction", "message": "Error loading models: [Errno 2] No such file or directory: 'E:\\\\ProjectsGithub\\\\Data Science Internship\\\\Task-4-Full-DS-Project\\\\models\\\\models\\\\house_price_model.pkl'"}
+{"timestamp": "2026-05-15T18:27:01.750489+00:00", "level": null, "name": "house_price_prediction", "message": "Models will need to be trained before making predictions"}
+{"timestamp": "2026-05-15T18:27:01.750575+00:00", "level": null, "name": "house_price_prediction", "message": "FastAPI application started"}
+{"timestamp": "2026-05-15T18:29:51.787533+00:00", "level": null, "name": "house_price_prediction", "message": "FastAPI application shutting down"}
+{"timestamp": "2026-05-15T18:29:54.844731+00:00", "level": null, "name": "house_price_prediction", "message": "Logging system initialized", "log_level": "INFO", "log_file": "E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\logs\\logs\\app.log", "debug_mode": false}
+{"timestamp": "2026-05-15T18:29:54.938859+00:00", "level": null, "name": "house_price_prediction", "message": "Loading models on startup"}
+{"timestamp": "2026-05-15T18:29:54.939383+00:00", "level": null, "name": "house_price_prediction", "message": "Error loading model: [Errno 2] No such file or directory: 'E:\\\\ProjectsGithub\\\\Data Science Internship\\\\Task-4-Full-DS-Project\\\\models\\\\models\\\\house_price_model.pkl'"}
+{"timestamp": "2026-05-15T18:29:54.939544+00:00", "level": null, "name": "house_price_prediction", "message": "Error loading models: [Errno 2] No such file or directory: 'E:\\\\ProjectsGithub\\\\Data Science Internship\\\\Task-4-Full-DS-Project\\\\models\\\\models\\\\house_price_model.pkl'"}
+{"timestamp": "2026-05-15T18:29:54.939631+00:00", "level": null, "name": "house_price_prediction", "message": "Models will need to be trained before making predictions"}
+{"timestamp": "2026-05-15T18:29:54.939719+00:00", "level": null, "name": "house_price_prediction", "message": "FastAPI application started"}
+{"timestamp": "2026-05-15T18:31:11.893019+00:00", "level": null, "name": "house_price_prediction", "message": "Logging system initialized", "log_level": "INFO", "log_file": "E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\logs\\logs\\app.log", "debug_mode": true}
+{"timestamp": "2026-05-15T18:31:12.251891+00:00", "level": null, "name": "house_price_prediction", "message": "FastAPI application shutting down"}
+{"timestamp": "2026-05-15T18:31:12.925150+00:00", "level": null, "name": "house_price_prediction", "message": "Model loaded successfully from models\\best_model.pkl"}
+{"timestamp": "2026-05-15T18:31:15.190680+00:00", "level": null, "name": "house_price_prediction", "message": "Logging system initialized", "log_level": "INFO", "log_file": "E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\logs\\logs\\app.log", "debug_mode": false}
+{"timestamp": "2026-05-15T18:31:15.275718+00:00", "level": null, "name": "house_price_prediction", "message": "Loading models on startup"}
+{"timestamp": "2026-05-15T18:31:15.276217+00:00", "level": null, "name": "house_price_prediction", "message": "Error loading model: [Errno 2] No such file or directory: 'E:\\\\ProjectsGithub\\\\Data Science Internship\\\\Task-4-Full-DS-Project\\\\models\\\\models\\\\house_price_model.pkl'"}
+{"timestamp": "2026-05-15T18:31:15.276343+00:00", "level": null, "name": "house_price_prediction", "message": "Error loading models: [Errno 2] No such file or directory: 'E:\\\\ProjectsGithub\\\\Data Science Internship\\\\Task-4-Full-DS-Project\\\\models\\\\models\\\\house_price_model.pkl'"}
+{"timestamp": "2026-05-15T18:31:15.276429+00:00", "level": null, "name": "house_price_prediction", "message": "Models will need to be trained before making predictions"}
+{"timestamp": "2026-05-15T18:31:15.276513+00:00", "level": null, "name": "house_price_prediction", "message": "FastAPI application started"}
+{"timestamp": "2026-05-15T18:32:44.433363+00:00", "level": null, "name": "house_price_prediction", "message": "FastAPI application shutting down"}
+{"timestamp": "2026-05-15T18:32:47.552121+00:00", "level": null, "name": "house_price_prediction", "message": "Logging system initialized", "log_level": "INFO", "log_file": "E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\logs\\logs\\app.log", "debug_mode": false}
+{"timestamp": "2026-05-15T18:32:47.636181+00:00", "level": null, "name": "house_price_prediction", "message": "Loading models on startup"}
+{"timestamp": "2026-05-15T18:32:47.636793+00:00", "level": null, "name": "house_price_prediction", "message": "Error loading model: [Errno 2] No such file or directory: 'E:\\\\ProjectsGithub\\\\Data Science Internship\\\\Task-4-Full-DS-Project\\\\models\\\\models\\\\house_price_model.pkl'"}
+{"timestamp": "2026-05-15T18:32:47.636930+00:00", "level": null, "name": "house_price_prediction", "message": "Error loading models: [Errno 2] No such file or directory: 'E:\\\\ProjectsGithub\\\\Data Science Internship\\\\Task-4-Full-DS-Project\\\\models\\\\models\\\\house_price_model.pkl'"}
+{"timestamp": "2026-05-15T18:32:47.637015+00:00", "level": null, "name": "house_price_prediction", "message": "Models will need to be trained before making predictions"}
+{"timestamp": "2026-05-15T18:32:47.637097+00:00", "level": null, "name": "house_price_prediction", "message": "FastAPI application started"}
+{"timestamp": "2026-05-15T18:32:51.015585+00:00", "level": null, "name": "house_price_prediction", "message": "Logging system initialized", "log_level": "INFO", "log_file": "E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\logs\\logs\\app.log", "debug_mode": true}
+{"timestamp": "2026-05-15T18:32:51.101432+00:00", "level": null, "name": "house_price_prediction", "message": "Loading models on startup"}
+{"timestamp": "2026-05-15T18:32:51.102442+00:00", "level": null, "name": "house_price_prediction", "message": "Error loading model: [Errno 2] No such file or directory: 'E:\\\\ProjectsGithub\\\\Data Science Internship\\\\Task-4-Full-DS-Project\\\\models\\\\models\\\\house_price_model.pkl'"}
+{"timestamp": "2026-05-15T18:32:51.103069+00:00", "level": null, "name": "house_price_prediction", "message": "Error loading models: [Errno 2] No such file or directory: 'E:\\\\ProjectsGithub\\\\Data Science Internship\\\\Task-4-Full-DS-Project\\\\models\\\\models\\\\house_price_model.pkl'"}
+{"timestamp": "2026-05-15T18:32:51.103508+00:00", "level": null, "name": "house_price_prediction", "message": "Models will need to be trained before making predictions"}
+{"timestamp": "2026-05-15T18:34:53.062649+00:00", "level": null, "name": "house_price_prediction", "message": "FastAPI application shutting down"}
+{"timestamp": "2026-05-15T18:34:55.922870+00:00", "level": null, "name": "house_price_prediction", "message": "Logging system initialized", "log_level": "INFO", "log_file": "E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\logs\\logs\\app.log", "debug_mode": false}
+{"timestamp": "2026-05-15T18:34:56.004042+00:00", "level": null, "name": "house_price_prediction", "message": "Loading models on startup"}
+{"timestamp": "2026-05-15T18:34:56.004715+00:00", "level": null, "name": "house_price_prediction", "message": "Error loading model: [Errno 2] No such file or directory: 'E:\\\\ProjectsGithub\\\\Data Science Internship\\\\Task-4-Full-DS-Project\\\\models\\\\models\\\\house_price_model.pkl'"}
+{"timestamp": "2026-05-15T18:34:56.004896+00:00", "level": null, "name": "house_price_prediction", "message": "Error loading models: [Errno 2] No such file or directory: 'E:\\\\ProjectsGithub\\\\Data Science Internship\\\\Task-4-Full-DS-Project\\\\models\\\\models\\\\house_price_model.pkl'"}
+{"timestamp": "2026-05-15T18:34:56.004986+00:00", "level": null, "name": "house_price_prediction", "message": "Models will need to be trained before making predictions"}
+{"timestamp": "2026-05-15T18:34:56.005074+00:00", "level": null, "name": "house_price_prediction", "message": "FastAPI application started"}
+{"timestamp": "2026-05-15T18:34:57.214296+00:00", "level": null, "name": "house_price_prediction", "message": "FastAPI application shutting down"}
+{"timestamp": "2026-05-15T18:35:00.003157+00:00", "level": null, "name": "house_price_prediction", "message": "Logging system initialized", "log_level": "INFO", "log_file": "E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\logs\\logs\\app.log", "debug_mode": false}
+{"timestamp": "2026-05-15T18:35:00.098281+00:00", "level": null, "name": "house_price_prediction", "message": "Loading models on startup"}
+{"timestamp": "2026-05-15T18:35:00.098891+00:00", "level": null, "name": "house_price_prediction", "message": "Error loading model: [Errno 2] No such file or directory: 'E:\\\\ProjectsGithub\\\\Data Science Internship\\\\Task-4-Full-DS-Project\\\\models\\\\house_price_model.pkl'"}
+{"timestamp": "2026-05-15T18:35:00.099114+00:00", "level": null, "name": "house_price_prediction", "message": "Error loading models: [Errno 2] No such file or directory: 'E:\\\\ProjectsGithub\\\\Data Science Internship\\\\Task-4-Full-DS-Project\\\\models\\\\house_price_model.pkl'"}
+{"timestamp": "2026-05-15T18:35:00.099265+00:00", "level": null, "name": "house_price_prediction", "message": "Models will need to be trained before making predictions"}
+{"timestamp": "2026-05-15T18:35:00.099410+00:00", "level": null, "name": "house_price_prediction", "message": "FastAPI application started"}
+{"timestamp": "2026-05-15T18:35:01.084315+00:00", "level": null, "name": "house_price_prediction", "message": "FastAPI application shutting down"}
+{"timestamp": "2026-05-15T18:35:03.858519+00:00", "level": null, "name": "house_price_prediction", "message": "Logging system initialized", "log_level": "INFO", "log_file": "E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\logs\\logs\\app.log", "debug_mode": false}
+{"timestamp": "2026-05-15T18:35:03.946579+00:00", "level": null, "name": "house_price_prediction", "message": "Loading models on startup"}
+{"timestamp": "2026-05-15T18:35:03.947001+00:00", "level": null, "name": "house_price_prediction", "message": "Error loading model: [Errno 2] No such file or directory: 'E:\\\\ProjectsGithub\\\\Data Science Internship\\\\Task-4-Full-DS-Project\\\\models\\\\house_price_model.pkl'"}
+{"timestamp": "2026-05-15T18:35:03.947128+00:00", "level": null, "name": "house_price_prediction", "message": "Error loading models: [Errno 2] No such file or directory: 'E:\\\\ProjectsGithub\\\\Data Science Internship\\\\Task-4-Full-DS-Project\\\\models\\\\house_price_model.pkl'"}
+{"timestamp": "2026-05-15T18:35:03.947227+00:00", "level": null, "name": "house_price_prediction", "message": "Models will need to be trained before making predictions"}
+{"timestamp": "2026-05-15T18:35:03.947313+00:00", "level": null, "name": "house_price_prediction", "message": "FastAPI application started"}
+{"timestamp": "2026-05-15T18:35:14.523263+00:00", "level": null, "name": "house_price_prediction", "message": "FastAPI application shutting down"}
+{"timestamp": "2026-05-15T18:35:17.606000+00:00", "level": null, "name": "house_price_prediction", "message": "Logging system initialized", "log_level": "INFO", "log_file": "E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\logs\\logs\\app.log", "debug_mode": false}
+{"timestamp": "2026-05-15T18:35:17.685944+00:00", "level": null, "name": "house_price_prediction", "message": "Loading models on startup"}
+{"timestamp": "2026-05-15T18:35:17.687095+00:00", "level": null, "name": "house_price_prediction", "message": "Error loading model: [Errno 2] No such file or directory: 'E:\\\\ProjectsGithub\\\\Data Science Internship\\\\Task-4-Full-DS-Project\\\\models\\\\house_price_model.pkl'"}
+{"timestamp": "2026-05-15T18:35:17.687335+00:00", "level": null, "name": "house_price_prediction", "message": "Model not found at E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\house_price_model.pkl"}
+{"timestamp": "2026-05-15T18:35:18.282037+00:00", "level": null, "name": "house_price_prediction", "message": "Model loaded successfully from E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\best_model.pkl"}
+{"timestamp": "2026-05-15T18:35:18.282359+00:00", "level": null, "name": "house_price_prediction", "message": "Loaded model from E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\best_model.pkl"}
+{"timestamp": "2026-05-15T18:35:18.284759+00:00", "level": null, "name": "house_price_prediction", "message": "Error loading model: No module named 'data_pipeline'"}
+{"timestamp": "2026-05-15T18:35:18.285057+00:00", "level": null, "name": "house_price_prediction", "message": "Preprocessor not found at E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\preprocessor.pkl"}
+{"timestamp": "2026-05-15T18:35:18.285180+00:00", "level": null, "name": "house_price_prediction", "message": "Tried model paths: ['E:\\\\ProjectsGithub\\\\Data Science Internship\\\\Task-4-Full-DS-Project\\\\models\\\\house_price_model.pkl', 'E:\\\\ProjectsGithub\\\\Data Science Internship\\\\Task-4-Full-DS-Project\\\\models\\\\best_model.pkl']"}
+{"timestamp": "2026-05-15T18:35:18.285308+00:00", "level": null, "name": "house_price_prediction", "message": "Models loaded successfully"}
+{"timestamp": "2026-05-15T18:35:18.285400+00:00", "level": null, "name": "house_price_prediction", "message": "FastAPI application started"}
+{"timestamp": "2026-05-15T18:35:25.143648+00:00", "level": null, "name": "house_price_prediction", "message": "FastAPI application shutting down"}
+{"timestamp": "2026-05-15T18:35:28.579968+00:00", "level": null, "name": "house_price_prediction", "message": "Logging system initialized", "log_level": "INFO", "log_file": "E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\logs\\logs\\app.log", "debug_mode": false}
+{"timestamp": "2026-05-15T18:35:28.671979+00:00", "level": null, "name": "house_price_prediction", "message": "Loading models on startup"}
+{"timestamp": "2026-05-15T18:35:28.672446+00:00", "level": null, "name": "house_price_prediction", "message": "Error loading model: [Errno 2] No such file or directory: 'E:\\\\ProjectsGithub\\\\Data Science Internship\\\\Task-4-Full-DS-Project\\\\models\\\\house_price_model.pkl'"}
+{"timestamp": "2026-05-15T18:35:28.672564+00:00", "level": null, "name": "house_price_prediction", "message": "Model not found at E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\house_price_model.pkl"}
+{"timestamp": "2026-05-15T18:35:29.257781+00:00", "level": null, "name": "house_price_prediction", "message": "Model loaded successfully from E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\best_model.pkl"}
+{"timestamp": "2026-05-15T18:35:29.258031+00:00", "level": null, "name": "house_price_prediction", "message": "Loaded model from E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\best_model.pkl"}
+{"timestamp": "2026-05-15T18:35:29.259355+00:00", "level": null, "name": "house_price_prediction", "message": "Error loading model: No module named 'data_pipeline'"}
+{"timestamp": "2026-05-15T18:35:29.259599+00:00", "level": null, "name": "house_price_prediction", "message": "Preprocessor not found at E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\preprocessor.pkl"}
+{"timestamp": "2026-05-15T18:35:29.259701+00:00", "level": null, "name": "house_price_prediction", "message": "Tried model paths: ['E:\\\\ProjectsGithub\\\\Data Science Internship\\\\Task-4-Full-DS-Project\\\\models\\\\house_price_model.pkl', 'E:\\\\ProjectsGithub\\\\Data Science Internship\\\\Task-4-Full-DS-Project\\\\models\\\\best_model.pkl']"}
+{"timestamp": "2026-05-15T18:35:29.259791+00:00", "level": null, "name": "house_price_prediction", "message": "Models loaded successfully"}
+{"timestamp": "2026-05-15T18:35:29.259869+00:00", "level": null, "name": "house_price_prediction", "message": "FastAPI application started"}
+{"timestamp": "2026-05-15T18:36:57.844998+00:00", "level": null, "name": "house_price_prediction", "message": "FastAPI application shutting down"}
+{"timestamp": "2026-05-15T18:37:00.819091+00:00", "level": null, "name": "house_price_prediction", "message": "Logging system initialized", "log_level": "INFO", "log_file": "E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\logs\\logs\\app.log", "debug_mode": false}
+{"timestamp": "2026-05-15T18:37:00.907715+00:00", "level": null, "name": "house_price_prediction", "message": "Loading models on startup"}
+{"timestamp": "2026-05-15T18:37:00.908184+00:00", "level": null, "name": "house_price_prediction", "message": "Error loading model: [Errno 2] No such file or directory: 'E:\\\\ProjectsGithub\\\\Data Science Internship\\\\Task-4-Full-DS-Project\\\\models\\\\house_price_model.pkl'"}
+{"timestamp": "2026-05-15T18:37:00.908301+00:00", "level": null, "name": "house_price_prediction", "message": "Model not found at E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\house_price_model.pkl"}
+{"timestamp": "2026-05-15T18:37:01.547127+00:00", "level": null, "name": "house_price_prediction", "message": "Model loaded successfully from E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\best_model.pkl"}
+{"timestamp": "2026-05-15T18:37:01.547397+00:00", "level": null, "name": "house_price_prediction", "message": "Loaded model from E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\best_model.pkl"}
+{"timestamp": "2026-05-15T18:37:01.548733+00:00", "level": null, "name": "house_price_prediction", "message": "Error loading model: No module named 'data_pipeline'"}
+{"timestamp": "2026-05-15T18:37:01.548938+00:00", "level": null, "name": "house_price_prediction", "message": "Preprocessor not found at E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\preprocessor.pkl"}
+{"timestamp": "2026-05-15T18:37:01.549042+00:00", "level": null, "name": "house_price_prediction", "message": "Tried model paths: ['E:\\\\ProjectsGithub\\\\Data Science Internship\\\\Task-4-Full-DS-Project\\\\models\\\\house_price_model.pkl', 'E:\\\\ProjectsGithub\\\\Data Science Internship\\\\Task-4-Full-DS-Project\\\\models\\\\best_model.pkl']"}
+{"timestamp": "2026-05-15T18:37:01.549143+00:00", "level": null, "name": "house_price_prediction", "message": "Models loaded successfully"}
+{"timestamp": "2026-05-15T18:37:01.549222+00:00", "level": null, "name": "house_price_prediction", "message": "FastAPI application started"}
+{"timestamp": "2026-05-15T18:37:02.416719+00:00", "level": null, "name": "house_price_prediction", "message": "FastAPI application shutting down"}
+{"timestamp": "2026-05-15T18:37:05.375449+00:00", "level": null, "name": "house_price_prediction", "message": "Logging system initialized", "log_level": "INFO", "log_file": "E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\logs\\logs\\app.log", "debug_mode": false}
+{"timestamp": "2026-05-15T18:37:05.461736+00:00", "level": null, "name": "house_price_prediction", "message": "Loading models on startup"}
+{"timestamp": "2026-05-15T18:37:05.462856+00:00", "level": null, "name": "house_price_prediction", "message": "Error loading model: [Errno 2] No such file or directory: 'E:\\\\ProjectsGithub\\\\Data Science Internship\\\\Task-4-Full-DS-Project\\\\models\\\\house_price_model.pkl'"}
+{"timestamp": "2026-05-15T18:37:05.463194+00:00", "level": null, "name": "house_price_prediction", "message": "Model not found at E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\house_price_model.pkl"}
+{"timestamp": "2026-05-15T18:37:05.722430+00:00", "level": null, "name": "house_price_prediction", "message": "Logging system initialized", "log_level": "INFO", "log_file": "E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\logs\\logs\\app.log", "debug_mode": true}
+{"timestamp": "2026-05-15T18:37:05.725179+00:00", "level": null, "name": "house_price_prediction", "message": "Error loading model: No module named 'data_pipeline'"}
+{"timestamp": "2026-05-15T18:37:06.078744+00:00", "level": null, "name": "house_price_prediction", "message": "Model loaded successfully from E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\best_model.pkl"}
+{"timestamp": "2026-05-15T18:37:06.079036+00:00", "level": null, "name": "house_price_prediction", "message": "Loaded model from E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\best_model.pkl"}
+{"timestamp": "2026-05-15T18:37:06.080318+00:00", "level": null, "name": "house_price_prediction", "message": "Error loading model: No module named 'data_pipeline'"}
+{"timestamp": "2026-05-15T18:37:06.080582+00:00", "level": null, "name": "house_price_prediction", "message": "Preprocessor not found at E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\preprocessor.pkl"}
+{"timestamp": "2026-05-15T18:37:06.080691+00:00", "level": null, "name": "house_price_prediction", "message": "Tried model paths: ['E:\\\\ProjectsGithub\\\\Data Science Internship\\\\Task-4-Full-DS-Project\\\\models\\\\house_price_model.pkl', 'E:\\\\ProjectsGithub\\\\Data Science Internship\\\\Task-4-Full-DS-Project\\\\models\\\\best_model.pkl']"}
+{"timestamp": "2026-05-15T18:37:06.080795+00:00", "level": null, "name": "house_price_prediction", "message": "Models loaded successfully"}
+{"timestamp": "2026-05-15T18:37:06.080873+00:00", "level": null, "name": "house_price_prediction", "message": "FastAPI application started"}
+{"timestamp": "2026-05-15T18:37:18.862302+00:00", "level": null, "name": "house_price_prediction", "message": "FastAPI application shutting down"}
+{"timestamp": "2026-05-15T18:37:21.824232+00:00", "level": null, "name": "house_price_prediction", "message": "Logging system initialized", "log_level": "INFO", "log_file": "E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\logs\\logs\\app.log", "debug_mode": false}
+{"timestamp": "2026-05-15T18:37:21.913543+00:00", "level": null, "name": "house_price_prediction", "message": "Loading models on startup"}
+{"timestamp": "2026-05-15T18:37:21.914121+00:00", "level": null, "name": "house_price_prediction", "message": "Error loading model: [Errno 2] No such file or directory: 'E:\\\\ProjectsGithub\\\\Data Science Internship\\\\Task-4-Full-DS-Project\\\\models\\\\house_price_model.pkl'"}
+{"timestamp": "2026-05-15T18:37:21.914455+00:00", "level": null, "name": "house_price_prediction", "message": "Model not found at E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\house_price_model.pkl"}
+{"timestamp": "2026-05-15T18:37:22.480095+00:00", "level": null, "name": "house_price_prediction", "message": "Model loaded successfully from E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\best_model.pkl"}
+{"timestamp": "2026-05-15T18:37:22.480419+00:00", "level": null, "name": "house_price_prediction", "message": "Loaded model from E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\best_model.pkl"}
+{"timestamp": "2026-05-15T18:37:25.809067+00:00", "level": null, "name": "house_price_prediction", "message": "Model loaded successfully from E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\preprocessor.pkl"}
+{"timestamp": "2026-05-15T18:37:25.809282+00:00", "level": null, "name": "house_price_prediction", "message": "Tried model paths: ['E:\\\\ProjectsGithub\\\\Data Science Internship\\\\Task-4-Full-DS-Project\\\\models\\\\house_price_model.pkl', 'E:\\\\ProjectsGithub\\\\Data Science Internship\\\\Task-4-Full-DS-Project\\\\models\\\\best_model.pkl']"}
+{"timestamp": "2026-05-15T18:37:25.809380+00:00", "level": null, "name": "house_price_prediction", "message": "Models loaded successfully"}
+{"timestamp": "2026-05-15T18:37:25.809489+00:00", "level": null, "name": "house_price_prediction", "message": "FastAPI application started"}
+{"timestamp": "2026-05-15T18:37:27.439284+00:00", "level": null, "name": "house_price_prediction", "message": "FastAPI application shutting down"}
+{"timestamp": "2026-05-15T18:37:30.535542+00:00", "level": null, "name": "house_price_prediction", "message": "Logging system initialized", "log_level": "INFO", "log_file": "E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\logs\\logs\\app.log", "debug_mode": false}
+{"timestamp": "2026-05-15T18:37:30.622938+00:00", "level": null, "name": "house_price_prediction", "message": "Loading models on startup"}
+{"timestamp": "2026-05-15T18:37:30.623586+00:00", "level": null, "name": "house_price_prediction", "message": "Error loading model: [Errno 2] No such file or directory: 'E:\\\\ProjectsGithub\\\\Data Science Internship\\\\Task-4-Full-DS-Project\\\\models\\\\house_price_model.pkl'"}
+{"timestamp": "2026-05-15T18:37:30.623757+00:00", "level": null, "name": "house_price_prediction", "message": "Model not found at E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\house_price_model.pkl"}
+{"timestamp": "2026-05-15T18:37:31.170072+00:00", "level": null, "name": "house_price_prediction", "message": "Model loaded successfully from E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\best_model.pkl"}
+{"timestamp": "2026-05-15T18:37:31.170259+00:00", "level": null, "name": "house_price_prediction", "message": "Loaded model from E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\best_model.pkl"}
+{"timestamp": "2026-05-15T18:37:33.224058+00:00", "level": null, "name": "house_price_prediction", "message": "Model loaded successfully from E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\preprocessor.pkl"}
+{"timestamp": "2026-05-15T18:37:33.224251+00:00", "level": null, "name": "house_price_prediction", "message": "Tried model paths: ['E:\\\\ProjectsGithub\\\\Data Science Internship\\\\Task-4-Full-DS-Project\\\\models\\\\house_price_model.pkl', 'E:\\\\ProjectsGithub\\\\Data Science Internship\\\\Task-4-Full-DS-Project\\\\models\\\\best_model.pkl']"}
+{"timestamp": "2026-05-15T18:37:33.224349+00:00", "level": null, "name": "house_price_prediction", "message": "Models loaded successfully"}
+{"timestamp": "2026-05-15T18:37:33.224428+00:00", "level": null, "name": "house_price_prediction", "message": "FastAPI application started"}
+{"timestamp": "2026-05-15T18:38:14.783677+00:00", "level": null, "name": "house_price_prediction", "message": "Logging system initialized", "log_level": "INFO", "log_file": "E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\logs\\logs\\app.log", "debug_mode": true}
+{"timestamp": "2026-05-15T18:38:15.001104+00:00", "level": null, "name": "house_price_prediction", "message": "FastAPI application shutting down"}
+{"timestamp": "2026-05-15T18:38:17.934223+00:00", "level": null, "name": "house_price_prediction", "message": "Model loaded successfully from models\\preprocessor.pkl"}
+{"timestamp": "2026-05-15T18:38:18.176378+00:00", "level": null, "name": "house_price_prediction", "message": "Logging system initialized", "log_level": "INFO", "log_file": "E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\logs\\logs\\app.log", "debug_mode": false}
+{"timestamp": "2026-05-15T18:38:18.266718+00:00", "level": null, "name": "house_price_prediction", "message": "Loading models on startup"}
+{"timestamp": "2026-05-15T18:38:18.267895+00:00", "level": null, "name": "house_price_prediction", "message": "Error loading model: [Errno 2] No such file or directory: 'E:\\\\ProjectsGithub\\\\Data Science Internship\\\\Task-4-Full-DS-Project\\\\models\\\\house_price_model.pkl'"}
+{"timestamp": "2026-05-15T18:38:18.268132+00:00", "level": null, "name": "house_price_prediction", "message": "Model not found at E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\house_price_model.pkl"}
+{"timestamp": "2026-05-15T18:38:18.895074+00:00", "level": null, "name": "house_price_prediction", "message": "Model loaded successfully from E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\best_model.pkl"}
+{"timestamp": "2026-05-15T18:38:18.895696+00:00", "level": null, "name": "house_price_prediction", "message": "Loaded model from E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\best_model.pkl"}
+{"timestamp": "2026-05-15T18:38:21.147036+00:00", "level": null, "name": "house_price_prediction", "message": "Model loaded successfully from E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\preprocessor.pkl"}
+{"timestamp": "2026-05-15T18:38:21.147273+00:00", "level": null, "name": "house_price_prediction", "message": "Tried model paths: ['E:\\\\ProjectsGithub\\\\Data Science Internship\\\\Task-4-Full-DS-Project\\\\models\\\\house_price_model.pkl', 'E:\\\\ProjectsGithub\\\\Data Science Internship\\\\Task-4-Full-DS-Project\\\\models\\\\best_model.pkl']"}
+{"timestamp": "2026-05-15T18:38:21.147379+00:00", "level": null, "name": "house_price_prediction", "message": "Models loaded successfully"}
+{"timestamp": "2026-05-15T18:38:21.147459+00:00", "level": null, "name": "house_price_prediction", "message": "FastAPI application started"}
+{"timestamp": "2026-05-15T18:39:53.760610+00:00", "level": null, "name": "house_price_prediction", "message": "FastAPI application shutting down"}
+{"timestamp": "2026-05-15T18:39:57.965606+00:00", "level": null, "name": "house_price_prediction", "message": "Logging system initialized", "log_level": "INFO", "log_file": "E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\logs\\logs\\app.log", "debug_mode": false}
+{"timestamp": "2026-05-15T18:39:58.067231+00:00", "level": null, "name": "house_price_prediction", "message": "Loading models on startup"}
+{"timestamp": "2026-05-15T18:39:58.068056+00:00", "level": null, "name": "house_price_prediction", "message": "Error loading model: [Errno 2] No such file or directory: 'E:\\\\ProjectsGithub\\\\Data Science Internship\\\\Task-4-Full-DS-Project\\\\models\\\\house_price_model.pkl'"}
+{"timestamp": "2026-05-15T18:39:58.068475+00:00", "level": null, "name": "house_price_prediction", "message": "Model not found at E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\house_price_model.pkl"}
+{"timestamp": "2026-05-15T18:39:58.854181+00:00", "level": null, "name": "house_price_prediction", "message": "Model loaded successfully from E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\best_model.pkl"}
+{"timestamp": "2026-05-15T18:39:58.854532+00:00", "level": null, "name": "house_price_prediction", "message": "Loaded model from E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\best_model.pkl"}
+{"timestamp": "2026-05-15T18:40:02.135502+00:00", "level": null, "name": "house_price_prediction", "message": "Model loaded successfully from E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\preprocessor.pkl"}
+{"timestamp": "2026-05-15T18:40:02.136002+00:00", "level": null, "name": "house_price_prediction", "message": "Tried model paths: ['E:\\\\ProjectsGithub\\\\Data Science Internship\\\\Task-4-Full-DS-Project\\\\models\\\\house_price_model.pkl', 'E:\\\\ProjectsGithub\\\\Data Science Internship\\\\Task-4-Full-DS-Project\\\\models\\\\best_model.pkl']"}
+{"timestamp": "2026-05-15T18:40:02.136265+00:00", "level": null, "name": "house_price_prediction", "message": "Models loaded successfully"}
+{"timestamp": "2026-05-15T18:40:02.136396+00:00", "level": null, "name": "house_price_prediction", "message": "FastAPI application started"}
+{"timestamp": "2026-05-15T18:41:29.388767+00:00", "level": null, "name": "house_price_prediction", "message": "Transforming new data with fitted preprocessor"}
+{"timestamp": "2026-05-15T18:41:29.403522+00:00", "level": null, "name": "house_price_prediction", "message": "Missing values handled successfully"}
+{"timestamp": "2026-05-15T18:41:29.440466+00:00", "level": null, "name": "house_price_prediction", "message": "Created 15 features through feature engineering"}
+{"timestamp": "2026-05-15T18:41:29.463214+00:00", "level": null, "name": "house_price_prediction", "message": "Features scaled using standard scaler"}
+{"timestamp": "2026-05-15T18:41:29.468634+00:00", "level": null, "name": "house_price_prediction", "message": "Data transformed successfully to shape (1, 15)"}
+{"timestamp": "2026-05-15T18:41:29.560272+00:00", "level": null, "name": "house_price_prediction", "message": "Prediction made: 500000.00"}
+{"timestamp": "2026-05-15T18:56:38.136283+00:00", "level": null, "name": "house_price_prediction", "message": "FastAPI application shutting down"}
+{"timestamp": "2026-05-15T18:56:41.987639+00:00", "level": null, "name": "house_price_prediction", "message": "Logging system initialized", "log_level": "INFO", "log_file": "E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\logs\\logs\\app.log", "debug_mode": true}
+{"timestamp": "2026-05-15T18:56:43.197748+00:00", "level": null, "name": "house_price_prediction", "message": "Logging system initialized", "log_level": "INFO", "log_file": "E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\logs\\logs\\app.log", "debug_mode": false}
+{"timestamp": "2026-05-15T18:56:43.300292+00:00", "level": null, "name": "house_price_prediction", "message": "Loading models on startup"}
+{"timestamp": "2026-05-15T18:56:43.300937+00:00", "level": null, "name": "house_price_prediction", "message": "Error loading model: [Errno 2] No such file or directory: 'E:\\\\ProjectsGithub\\\\Data Science Internship\\\\Task-4-Full-DS-Project\\\\models\\\\house_price_model.pkl'"}
+{"timestamp": "2026-05-15T18:56:43.301206+00:00", "level": null, "name": "house_price_prediction", "message": "Model not found at E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\house_price_model.pkl"}
+{"timestamp": "2026-05-15T18:56:44.018671+00:00", "level": null, "name": "house_price_prediction", "message": "Model loaded successfully from E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\best_model.pkl"}
+{"timestamp": "2026-05-15T18:56:44.018933+00:00", "level": null, "name": "house_price_prediction", "message": "Loaded model from E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\best_model.pkl"}
+{"timestamp": "2026-05-15T18:56:46.829344+00:00", "level": null, "name": "house_price_prediction", "message": "Model loaded successfully from E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\preprocessor.pkl"}
+{"timestamp": "2026-05-15T18:56:46.829723+00:00", "level": null, "name": "house_price_prediction", "message": "Tried model paths: ['E:\\\\ProjectsGithub\\\\Data Science Internship\\\\Task-4-Full-DS-Project\\\\models\\\\house_price_model.pkl', 'E:\\\\ProjectsGithub\\\\Data Science Internship\\\\Task-4-Full-DS-Project\\\\models\\\\best_model.pkl']"}
+{"timestamp": "2026-05-15T18:56:46.829848+00:00", "level": null, "name": "house_price_prediction", "message": "Models loaded successfully"}
+{"timestamp": "2026-05-15T18:56:46.829943+00:00", "level": null, "name": "house_price_prediction", "message": "FastAPI application started"}
+{"timestamp": "2026-05-15T18:56:47.100137+00:00", "level": null, "name": "house_price_prediction", "message": "================================================================================"}
+{"timestamp": "2026-05-15T18:56:47.100713+00:00", "level": null, "name": "house_price_prediction", "message": "HOUSE PRICE PREDICTION - TRAINING PIPELINE"}
+{"timestamp": "2026-05-15T18:56:47.100983+00:00", "level": null, "name": "house_price_prediction", "message": "================================================================================"}
+{"timestamp": "2026-05-15T18:56:47.101219+00:00", "level": null, "name": "house_price_prediction", "message": "\n[STEP 1] Loading data..."}
+{"timestamp": "2026-05-15T18:56:47.101522+00:00", "level": null, "name": "house_price_prediction", "message": "Loading data from E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\data\\train.csv"}
+{"timestamp": "2026-05-15T18:56:47.123061+00:00", "level": null, "name": "house_price_prediction", "message": "Training data loaded: (800, 8)"}
+{"timestamp": "2026-05-15T18:56:47.134167+00:00", "level": null, "name": "house_price_prediction", "message": "Data split: train (640, 8), test (160, 8)"}
+{"timestamp": "2026-05-15T18:56:47.140416+00:00", "level": null, "name": "house_price_prediction", "message": "\n[STEP 2] Preprocessing data..."}
+{"timestamp": "2026-05-15T18:56:47.140796+00:00", "level": null, "name": "house_price_prediction", "message": "AdvancedPreprocessor initialized"}
+{"timestamp": "2026-05-15T18:56:47.142539+00:00", "level": null, "name": "house_price_prediction", "message": "Starting data preprocessing pipeline"}
+{"timestamp": "2026-05-15T18:56:47.146842+00:00", "level": null, "name": "house_price_prediction", "message": "Identified 7 numeric and 1 categorical features"}
+{"timestamp": "2026-05-15T18:56:47.150666+00:00", "level": null, "name": "house_price_prediction", "message": "Missing values handled successfully"}
+{"timestamp": "2026-05-15T18:56:47.157634+00:00", "level": null, "name": "house_price_prediction", "message": "Found 3 outliers in square_feet, capping values"}
+{"timestamp": "2026-05-15T18:56:47.163189+00:00", "level": null, "name": "house_price_prediction", "message": "Found 56 outliers in bedrooms, capping values"}
+{"timestamp": "2026-05-15T18:56:47.170858+00:00", "level": null, "name": "house_price_prediction", "message": "Found 24 outliers in age, capping values"}
+{"timestamp": "2026-05-15T18:56:47.174980+00:00", "level": null, "name": "house_price_prediction", "message": "Found 306 outliers in garage, capping values"}
+{"timestamp": "2026-05-15T18:56:47.178959+00:00", "level": null, "name": "house_price_prediction", "message": "Found 3 outliers in location_score, capping values"}
+{"timestamp": "2026-05-15T18:56:47.183167+00:00", "level": null, "name": "house_price_prediction", "message": "Found 65 outliers in Price, capping values"}
+{"timestamp": "2026-05-15T18:56:47.189898+00:00", "level": null, "name": "house_price_prediction", "message": "Created 16 features through feature engineering"}
+{"timestamp": "2026-05-15T18:56:47.202149+00:00", "level": null, "name": "house_price_prediction", "message": "Features scaled using standard scaler"}
+{"timestamp": "2026-05-15T18:56:47.202737+00:00", "level": null, "name": "house_price_prediction", "message": "Preprocessing completed: {'original_shape': (640, 16), 'final_shape': (640, 15), 'numeric_features': 7, 'categorical_features': 1, 'feature_names': ['square_feet', 'bedrooms', 'bathrooms', 'age', 'garage', 'location_score', 'condition', 'square_feet_squared', 'square_feet_sqrt', 'bedrooms_squared', 'bedrooms_sqrt', 'bathrooms_squared', 'bathrooms_sqrt', 'square_feet_x_bedrooms', 'bedrooms_x_bathrooms']}"}
+{"timestamp": "2026-05-15T18:56:47.203052+00:00", "level": null, "name": "house_price_prediction", "message": "Transforming new data with fitted preprocessor"}
+{"timestamp": "2026-05-15T18:56:47.205399+00:00", "level": null, "name": "house_price_prediction", "message": "Missing values handled successfully"}
+{"timestamp": "2026-05-15T18:56:47.207731+00:00", "level": null, "name": "house_price_prediction", "message": "Found 1 outliers in square_feet, capping values"}
+{"timestamp": "2026-05-15T18:56:47.211055+00:00", "level": null, "name": "house_price_prediction", "message": "Found 14 outliers in bedrooms, capping values"}
+{"timestamp": "2026-05-15T18:56:47.215453+00:00", "level": null, "name": "house_price_prediction", "message": "Found 1 outliers in bathrooms, capping values"}
+{"timestamp": "2026-05-15T18:56:47.219643+00:00", "level": null, "name": "house_price_prediction", "message": "Found 10 outliers in age, capping values"}
+{"timestamp": "2026-05-15T18:56:47.222799+00:00", "level": null, "name": "house_price_prediction", "message": "Found 8 outliers in garage, capping values"}
+{"timestamp": "2026-05-15T18:56:47.229838+00:00", "level": null, "name": "house_price_prediction", "message": "Created 15 features through feature engineering"}
+{"timestamp": "2026-05-15T18:56:47.237750+00:00", "level": null, "name": "house_price_prediction", "message": "Features scaled using standard scaler"}
+{"timestamp": "2026-05-15T18:56:47.239376+00:00", "level": null, "name": "house_price_prediction", "message": "Data transformed successfully to shape (160, 15)"}
+{"timestamp": "2026-05-15T18:56:47.239727+00:00", "level": null, "name": "house_price_prediction", "message": "Preprocessing info: {'original_shape': (640, 16), 'final_shape': (640, 15), 'numeric_features': 7, 'categorical_features': 1, 'feature_names': ['square_feet', 'bedrooms', 'bathrooms', 'age', 'garage', 'location_score', 'condition', 'square_feet_squared', 'square_feet_sqrt', 'bedrooms_squared', 'bedrooms_sqrt', 'bathrooms_squared', 'bathrooms_sqrt', 'square_feet_x_bedrooms', 'bedrooms_x_bathrooms']}"}
+{"timestamp": "2026-05-15T18:56:47.239925+00:00", "level": null, "name": "house_price_prediction", "message": "\n[STEP 3] Training multiple models..."}
+{"timestamp": "2026-05-15T18:56:47.240082+00:00", "level": null, "name": "house_price_prediction", "message": "ModelTrainer initialized"}
+{"timestamp": "2026-05-15T18:56:47.240258+00:00", "level": null, "name": "house_price_prediction", "message": "Starting multi-model training"}
+{"timestamp": "2026-05-15T18:56:47.240424+00:00", "level": null, "name": "house_price_prediction", "message": "Building XGBoost model"}
+{"timestamp": "2026-05-15T18:56:47.240639+00:00", "level": null, "name": "house_price_prediction", "message": "Building LightGBM model"}
+{"timestamp": "2026-05-15T18:56:47.240829+00:00", "level": null, "name": "house_price_prediction", "message": "Building CatBoost model"}
+{"timestamp": "2026-05-15T18:56:47.241100+00:00", "level": null, "name": "house_price_prediction", "message": "Building Random Forest model"}
+{"timestamp": "2026-05-15T18:56:47.241335+00:00", "level": null, "name": "house_price_prediction", "message": "Building Gradient Boosting model"}
+{"timestamp": "2026-05-15T18:56:47.241546+00:00", "level": null, "name": "house_price_prediction", "message": "Training xgboost"}
+{"timestamp": "2026-05-15T18:57:04.845661+00:00", "level": null, "name": "house_price_prediction", "message": "xgboost CV R\u00b2 Score: 0.6524"}
+{"timestamp": "2026-05-15T18:57:04.854359+00:00", "level": null, "name": "house_price_prediction", "message": "Training lightgbm"}
+{"timestamp": "2026-05-15T18:57:15.764460+00:00", "level": null, "name": "house_price_prediction", "message": "lightgbm CV R\u00b2 Score: 0.6603"}
+{"timestamp": "2026-05-15T18:57:15.765683+00:00", "level": null, "name": "house_price_prediction", "message": "Training catboost"}
+{"timestamp": "2026-05-15T18:57:33.213598+00:00", "level": null, "name": "house_price_prediction", "message": "catboost CV R\u00b2 Score: 0.6831"}
+{"timestamp": "2026-05-15T18:57:33.214926+00:00", "level": null, "name": "house_price_prediction", "message": "Training random_forest"}
+{"timestamp": "2026-05-15T18:57:40.453152+00:00", "level": null, "name": "house_price_prediction", "message": "random_forest CV R\u00b2 Score: 0.6703"}
+{"timestamp": "2026-05-15T18:57:40.454482+00:00", "level": null, "name": "house_price_prediction", "message": "Training gradient_boosting"}
+{"timestamp": "2026-05-15T18:57:43.161240+00:00", "level": null, "name": "house_price_prediction", "message": "gradient_boosting CV R\u00b2 Score: 0.6534"}
+{"timestamp": "2026-05-15T18:57:43.162740+00:00", "level": null, "name": "house_price_prediction", "message": "Best model selected: catboost with CV R\u00b2 Score: 0.6831"}
+{"timestamp": "2026-05-15T18:57:43.164972+00:00", "level": null, "name": "house_price_prediction", "message": "\nCross-validation scores:"}
+{"timestamp": "2026-05-15T18:57:43.166209+00:00", "level": null, "name": "house_price_prediction", "message": "  catboost: 0.6831"}
+{"timestamp": "2026-05-15T18:57:43.167224+00:00", "level": null, "name": "house_price_prediction", "message": "  random_forest: 0.6703"}
+{"timestamp": "2026-05-15T18:57:43.167966+00:00", "level": null, "name": "house_price_prediction", "message": "  lightgbm: 0.6603"}
+{"timestamp": "2026-05-15T18:57:43.170152+00:00", "level": null, "name": "house_price_prediction", "message": "  gradient_boosting: 0.6534"}
+{"timestamp": "2026-05-15T18:57:43.171477+00:00", "level": null, "name": "house_price_prediction", "message": "  xgboost: 0.6524"}
+{"timestamp": "2026-05-15T18:57:43.172294+00:00", "level": null, "name": "house_price_prediction", "message": "\n[STEP 4] Evaluating on test set..."}
+{"timestamp": "2026-05-15T18:57:43.173245+00:00", "level": null, "name": "house_price_prediction", "message": "Evaluating models on test set"}
+{"timestamp": "2026-05-15T18:57:43.230211+00:00", "level": null, "name": "house_price_prediction", "message": "xgboost Test R\u00b2 Score: 0.5787"}
+{"timestamp": "2026-05-15T18:57:43.248047+00:00", "level": null, "name": "house_price_prediction", "message": "lightgbm Test R\u00b2 Score: 0.5866"}
+{"timestamp": "2026-05-15T18:57:43.261686+00:00", "level": null, "name": "house_price_prediction", "message": "catboost Test R\u00b2 Score: 0.5878"}
+{"timestamp": "2026-05-15T18:57:43.421008+00:00", "level": null, "name": "house_price_prediction", "message": "random_forest Test R\u00b2 Score: 0.5323"}
+{"timestamp": "2026-05-15T18:57:43.427866+00:00", "level": null, "name": "house_price_prediction", "message": "gradient_boosting Test R\u00b2 Score: 0.5665"}
+{"timestamp": "2026-05-15T18:57:43.428525+00:00", "level": null, "name": "house_price_prediction", "message": "\nTest set evaluation:"}
+{"timestamp": "2026-05-15T18:57:43.428957+00:00", "level": null, "name": "house_price_prediction", "message": "  xgboost:"}
+{"timestamp": "2026-05-15T18:57:43.429359+00:00", "level": null, "name": "house_price_prediction", "message": "    R\u00b2 Score: 0.5787"}
+{"timestamp": "2026-05-15T18:57:43.429665+00:00", "level": null, "name": "house_price_prediction", "message": "    RMSE: $35004.70"}
+{"timestamp": "2026-05-15T18:57:43.429924+00:00", "level": null, "name": "house_price_prediction", "message": "    MAE: $20503.13"}
+{"timestamp": "2026-05-15T18:57:43.430375+00:00", "level": null, "name": "house_price_prediction", "message": "  lightgbm:"}
+{"timestamp": "2026-05-15T18:57:43.430841+00:00", "level": null, "name": "house_price_prediction", "message": "    R\u00b2 Score: 0.5866"}
+{"timestamp": "2026-05-15T18:57:43.431169+00:00", "level": null, "name": "house_price_prediction", "message": "    RMSE: $34673.24"}
+{"timestamp": "2026-05-15T18:57:43.431424+00:00", "level": null, "name": "house_price_prediction", "message": "    MAE: $21412.23"}
+{"timestamp": "2026-05-15T18:57:43.431668+00:00", "level": null, "name": "house_price_prediction", "message": "  catboost:"}
+{"timestamp": "2026-05-15T18:57:43.432035+00:00", "level": null, "name": "house_price_prediction", "message": "    R\u00b2 Score: 0.5878"}
+{"timestamp": "2026-05-15T18:57:43.432422+00:00", "level": null, "name": "house_price_prediction", "message": "    RMSE: $34622.89"}
+{"timestamp": "2026-05-15T18:57:43.432732+00:00", "level": null, "name": "house_price_prediction", "message": "    MAE: $20400.15"}
+{"timestamp": "2026-05-15T18:57:43.432986+00:00", "level": null, "name": "house_price_prediction", "message": "  random_forest:"}
+{"timestamp": "2026-05-15T18:57:43.433399+00:00", "level": null, "name": "house_price_prediction", "message": "    R\u00b2 Score: 0.5323"}
+{"timestamp": "2026-05-15T18:57:43.433706+00:00", "level": null, "name": "house_price_prediction", "message": "    RMSE: $36882.61"}
+{"timestamp": "2026-05-15T18:57:43.433958+00:00", "level": null, "name": "house_price_prediction", "message": "    MAE: $21425.68"}
+{"timestamp": "2026-05-15T18:57:43.434193+00:00", "level": null, "name": "house_price_prediction", "message": "  gradient_boosting:"}
+{"timestamp": "2026-05-15T18:57:43.434426+00:00", "level": null, "name": "house_price_prediction", "message": "    R\u00b2 Score: 0.5665"}
+{"timestamp": "2026-05-15T18:57:43.434748+00:00", "level": null, "name": "house_price_prediction", "message": "    RMSE: $35505.40"}
+{"timestamp": "2026-05-15T18:57:43.435036+00:00", "level": null, "name": "house_price_prediction", "message": "    MAE: $20958.66"}
+{"timestamp": "2026-05-15T18:57:43.435321+00:00", "level": null, "name": "house_price_prediction", "message": "\n[STEP 5] Saving models and preprocessor..."}
+{"timestamp": "2026-05-15T18:57:43.436596+00:00", "level": null, "name": "house_price_prediction", "message": "Saving all trained models"}
+{"timestamp": "2026-05-15T18:57:43.451178+00:00", "level": null, "name": "house_price_prediction", "message": "Model saved successfully to E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\xgboost_model.pkl"}
+{"timestamp": "2026-05-15T18:57:43.464556+00:00", "level": null, "name": "house_price_prediction", "message": "Model saved successfully to E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\lightgbm_model.pkl"}
+{"timestamp": "2026-05-15T18:57:43.472796+00:00", "level": null, "name": "house_price_prediction", "message": "Model saved successfully to E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\catboost_model.pkl"}
+{"timestamp": "2026-05-15T18:57:43.497453+00:00", "level": null, "name": "house_price_prediction", "message": "Model saved successfully to E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\random_forest_model.pkl"}
+{"timestamp": "2026-05-15T18:57:43.519137+00:00", "level": null, "name": "house_price_prediction", "message": "Model saved successfully to E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\gradient_boosting_model.pkl"}
+{"timestamp": "2026-05-15T18:57:43.523532+00:00", "level": null, "name": "house_price_prediction", "message": "Model saved successfully to E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\best_model.pkl"}
+{"timestamp": "2026-05-15T18:57:43.527704+00:00", "level": null, "name": "house_price_prediction", "message": "Model saved successfully to E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\preprocessor.pkl"}
+{"timestamp": "2026-05-15T18:57:43.528396+00:00", "level": null, "name": "house_price_prediction", "message": "Models saved to E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models"}
+{"timestamp": "2026-05-15T18:57:43.528806+00:00", "level": null, "name": "house_price_prediction", "message": "\n[STEP 6] Generating predictions..."}
+{"timestamp": "2026-05-15T18:57:43.535335+00:00", "level": null, "name": "house_price_prediction", "message": "Prediction successful for 160 samples"}
+{"timestamp": "2026-05-15T18:57:43.539693+00:00", "level": null, "name": "house_price_prediction", "message": "\nBest model performance:"}
+{"timestamp": "2026-05-15T18:57:43.540417+00:00", "level": null, "name": "house_price_prediction", "message": "  R\u00b2 Score: 0.5878"}
+{"timestamp": "2026-05-15T18:57:43.540940+00:00", "level": null, "name": "house_price_prediction", "message": "  RMSE: $34622.89"}
+{"timestamp": "2026-05-15T18:57:43.541436+00:00", "level": null, "name": "house_price_prediction", "message": "  MAE: $20400.15"}
+{"timestamp": "2026-05-15T18:57:43.543165+00:00", "level": null, "name": "house_price_prediction", "message": "  MAPE: 5.16%"}
+{"timestamp": "2026-05-15T18:57:43.544017+00:00", "level": null, "name": "house_price_prediction", "message": "\n[STEP 7] Feature importance analysis..."}
+{"timestamp": "2026-05-15T18:57:43.546102+00:00", "level": null, "name": "house_price_prediction", "message": "Top 10 important features:"}
+{"timestamp": "2026-05-15T18:57:43.546908+00:00", "level": null, "name": "house_price_prediction", "message": "  feature_6: 41.7106"}
+{"timestamp": "2026-05-15T18:57:43.547445+00:00", "level": null, "name": "house_price_prediction", "message": "  feature_13: 22.8556"}
+{"timestamp": "2026-05-15T18:57:43.547920+00:00", "level": null, "name": "house_price_prediction", "message": "  feature_5: 9.2806"}
+{"timestamp": "2026-05-15T18:57:43.548393+00:00", "level": null, "name": "house_price_prediction", "message": "  feature_0: 4.1947"}
+{"timestamp": "2026-05-15T18:57:43.548790+00:00", "level": null, "name": "house_price_prediction", "message": "  feature_8: 4.1417"}
+{"timestamp": "2026-05-15T18:57:43.549134+00:00", "level": null, "name": "house_price_prediction", "message": "  feature_7: 3.7639"}
+{"timestamp": "2026-05-15T18:57:43.549721+00:00", "level": null, "name": "house_price_prediction", "message": "  feature_3: 3.4011"}
+{"timestamp": "2026-05-15T18:57:43.550498+00:00", "level": null, "name": "house_price_prediction", "message": "  feature_12: 2.1531"}
+{"timestamp": "2026-05-15T18:57:43.550977+00:00", "level": null, "name": "house_price_prediction", "message": "  feature_11: 2.0242"}
+{"timestamp": "2026-05-15T18:57:43.551420+00:00", "level": null, "name": "house_price_prediction", "message": "  feature_9: 1.5885"}
+{"timestamp": "2026-05-15T18:57:43.551889+00:00", "level": null, "name": "house_price_prediction", "message": "\n================================================================================"}
+{"timestamp": "2026-05-15T18:57:43.553068+00:00", "level": null, "name": "house_price_prediction", "message": "TRAINING PIPELINE COMPLETED SUCCESSFULLY!"}
+{"timestamp": "2026-05-15T18:57:43.553925+00:00", "level": null, "name": "house_price_prediction", "message": "================================================================================"}
+{"timestamp": "2026-05-15T18:58:29.607559+00:00", "level": null, "name": "house_price_prediction", "message": "Logging system initialized", "log_level": "INFO", "log_file": "E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\logs\\logs\\app.log", "debug_mode": true}
+{"timestamp": "2026-05-15T18:58:32.152304+00:00", "level": null, "name": "house_price_prediction", "message": "Model loaded successfully from models\\preprocessor.pkl"}
+{"timestamp": "2026-05-15T18:59:41.466092+00:00", "level": null, "name": "house_price_prediction", "message": "FastAPI application shutting down"}
+{"timestamp": "2026-05-15T18:59:44.657502+00:00", "level": null, "name": "house_price_prediction", "message": "Logging system initialized", "log_level": "INFO", "log_file": "E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\logs\\logs\\app.log", "debug_mode": false}
+{"timestamp": "2026-05-15T18:59:44.740625+00:00", "level": null, "name": "house_price_prediction", "message": "Loading models on startup"}
+{"timestamp": "2026-05-15T18:59:44.741110+00:00", "level": null, "name": "house_price_prediction", "message": "Error loading model: [Errno 2] No such file or directory: 'E:\\\\ProjectsGithub\\\\Data Science Internship\\\\Task-4-Full-DS-Project\\\\models\\\\house_price_model.pkl'"}
+{"timestamp": "2026-05-15T18:59:44.741270+00:00", "level": null, "name": "house_price_prediction", "message": "Model not found at E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\house_price_model.pkl"}
+{"timestamp": "2026-05-15T18:59:45.413435+00:00", "level": null, "name": "house_price_prediction", "message": "Model loaded successfully from E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\best_model.pkl"}
+{"timestamp": "2026-05-15T18:59:45.413670+00:00", "level": null, "name": "house_price_prediction", "message": "Loaded model from E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\best_model.pkl"}
+{"timestamp": "2026-05-15T18:59:47.877629+00:00", "level": null, "name": "house_price_prediction", "message": "Model loaded successfully from E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\preprocessor.pkl"}
+{"timestamp": "2026-05-15T18:59:47.877959+00:00", "level": null, "name": "house_price_prediction", "message": "Tried model paths: ['E:\\\\ProjectsGithub\\\\Data Science Internship\\\\Task-4-Full-DS-Project\\\\models\\\\house_price_model.pkl', 'E:\\\\ProjectsGithub\\\\Data Science Internship\\\\Task-4-Full-DS-Project\\\\models\\\\best_model.pkl']"}
+{"timestamp": "2026-05-15T18:59:47.878073+00:00", "level": null, "name": "house_price_prediction", "message": "Models loaded successfully"}
+{"timestamp": "2026-05-15T18:59:47.878152+00:00", "level": null, "name": "house_price_prediction", "message": "FastAPI application started"}
+{"timestamp": "2026-05-15T19:01:19.608170+00:00", "level": null, "name": "house_price_prediction", "message": "Transforming new data with fitted preprocessor"}
+{"timestamp": "2026-05-15T19:01:19.611474+00:00", "level": null, "name": "house_price_prediction", "message": "Missing values handled successfully"}
+{"timestamp": "2026-05-15T19:01:19.631382+00:00", "level": null, "name": "house_price_prediction", "message": "Created 15 features through feature engineering"}
+{"timestamp": "2026-05-15T19:01:19.639426+00:00", "level": null, "name": "house_price_prediction", "message": "Features scaled using standard scaler"}
+{"timestamp": "2026-05-15T19:01:19.642076+00:00", "level": null, "name": "house_price_prediction", "message": "Data transformed successfully to shape (1, 15)"}
+{"timestamp": "2026-05-15T19:01:19.663259+00:00", "level": null, "name": "house_price_prediction", "message": "Prediction made: 500000.00"}
+{"timestamp": "2026-05-15T19:04:19.358637+00:00", "level": null, "name": "house_price_prediction", "message": "FastAPI application shutting down"}
+{"timestamp": "2026-05-15T19:04:24.396083+00:00", "level": null, "name": "house_price_prediction", "message": "Logging system initialized", "log_level": "INFO", "log_file": "E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\logs\\logs\\app.log", "debug_mode": false}
+{"timestamp": "2026-05-15T19:04:24.404852+00:00", "level": null, "name": "house_price_prediction", "message": "Mounted frontend static files from E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\frontend at /ui"}
+{"timestamp": "2026-05-15T19:04:24.492411+00:00", "level": null, "name": "house_price_prediction", "message": "Loading models on startup"}
+{"timestamp": "2026-05-15T19:04:24.492805+00:00", "level": null, "name": "house_price_prediction", "message": "Error loading model: [Errno 2] No such file or directory: 'E:\\\\ProjectsGithub\\\\Data Science Internship\\\\Task-4-Full-DS-Project\\\\models\\\\house_price_model.pkl'"}
+{"timestamp": "2026-05-15T19:04:24.492905+00:00", "level": null, "name": "house_price_prediction", "message": "Model not found at E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\house_price_model.pkl"}
+{"timestamp": "2026-05-15T19:04:25.291073+00:00", "level": null, "name": "house_price_prediction", "message": "Model loaded successfully from E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\best_model.pkl"}
+{"timestamp": "2026-05-15T19:04:25.291306+00:00", "level": null, "name": "house_price_prediction", "message": "Loaded model from E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\best_model.pkl"}
+{"timestamp": "2026-05-15T19:04:27.720604+00:00", "level": null, "name": "house_price_prediction", "message": "Model loaded successfully from E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\preprocessor.pkl"}
+{"timestamp": "2026-05-15T19:04:27.720773+00:00", "level": null, "name": "house_price_prediction", "message": "Tried model paths: ['E:\\\\ProjectsGithub\\\\Data Science Internship\\\\Task-4-Full-DS-Project\\\\models\\\\house_price_model.pkl', 'E:\\\\ProjectsGithub\\\\Data Science Internship\\\\Task-4-Full-DS-Project\\\\models\\\\best_model.pkl']"}
+{"timestamp": "2026-05-15T19:04:27.720859+00:00", "level": null, "name": "house_price_prediction", "message": "Models loaded successfully"}
+{"timestamp": "2026-05-15T19:04:27.720927+00:00", "level": null, "name": "house_price_prediction", "message": "FastAPI application started"}
+{"timestamp": "2026-05-15T19:05:42.757976+00:00", "level": null, "name": "house_price_prediction", "message": "FastAPI application shutting down"}
+{"timestamp": "2026-05-15T19:05:46.397514+00:00", "level": null, "name": "house_price_prediction", "message": "Logging system initialized", "log_level": "INFO", "log_file": "E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\logs\\logs\\app.log", "debug_mode": false}
+{"timestamp": "2026-05-15T19:05:46.430278+00:00", "level": null, "name": "house_price_prediction", "message": "Mounted frontend static files from E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\frontend at /ui"}
+{"timestamp": "2026-05-15T19:05:46.564148+00:00", "level": null, "name": "house_price_prediction", "message": "Loading models on startup"}
+{"timestamp": "2026-05-15T19:05:46.565634+00:00", "level": null, "name": "house_price_prediction", "message": "Error loading model: [Errno 2] No such file or directory: 'E:\\\\ProjectsGithub\\\\Data Science Internship\\\\Task-4-Full-DS-Project\\\\models\\\\house_price_model.pkl'"}
+{"timestamp": "2026-05-15T19:05:46.566340+00:00", "level": null, "name": "house_price_prediction", "message": "Model not found at E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\house_price_model.pkl"}
+{"timestamp": "2026-05-15T19:05:47.613223+00:00", "level": null, "name": "house_price_prediction", "message": "Model loaded successfully from E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\best_model.pkl"}
+{"timestamp": "2026-05-15T19:05:47.613541+00:00", "level": null, "name": "house_price_prediction", "message": "Loaded model from E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\best_model.pkl"}
+{"timestamp": "2026-05-15T19:05:50.187771+00:00", "level": null, "name": "house_price_prediction", "message": "Model loaded successfully from E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\preprocessor.pkl"}
+{"timestamp": "2026-05-15T19:05:50.187971+00:00", "level": null, "name": "house_price_prediction", "message": "Tried model paths: ['E:\\\\ProjectsGithub\\\\Data Science Internship\\\\Task-4-Full-DS-Project\\\\models\\\\house_price_model.pkl', 'E:\\\\ProjectsGithub\\\\Data Science Internship\\\\Task-4-Full-DS-Project\\\\models\\\\best_model.pkl']"}
+{"timestamp": "2026-05-15T19:05:50.188049+00:00", "level": null, "name": "house_price_prediction", "message": "Models loaded successfully"}
+{"timestamp": "2026-05-15T19:05:50.188112+00:00", "level": null, "name": "house_price_prediction", "message": "FastAPI application started"}
+{"timestamp": "2026-05-15T19:06:47.415576+00:00", "level": null, "name": "house_price_prediction", "message": "Transforming new data with fitted preprocessor"}
+{"timestamp": "2026-05-15T19:06:47.418922+00:00", "level": null, "name": "house_price_prediction", "message": "Missing values handled successfully"}
+{"timestamp": "2026-05-15T19:06:47.435377+00:00", "level": null, "name": "house_price_prediction", "message": "Created 15 features through feature engineering"}
+{"timestamp": "2026-05-15T19:06:47.443285+00:00", "level": null, "name": "house_price_prediction", "message": "Features scaled using standard scaler"}
+{"timestamp": "2026-05-15T19:06:47.444133+00:00", "level": null, "name": "house_price_prediction", "message": "Data transformed successfully to shape (1, 15)"}
+{"timestamp": "2026-05-15T19:06:47.447779+00:00", "level": null, "name": "house_price_prediction", "message": "Prediction made: 500000.00"}
+{"timestamp": "2026-05-15T19:08:02.212991+00:00", "level": null, "name": "house_price_prediction", "message": "FastAPI application shutting down"}
+{"timestamp": "2026-05-15T19:08:07.130812+00:00", "level": null, "name": "house_price_prediction", "message": "Logging system initialized", "log_level": "INFO", "log_file": "E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\logs\\logs\\app.log", "debug_mode": false}
+{"timestamp": "2026-05-15T19:08:07.140512+00:00", "level": null, "name": "house_price_prediction", "message": "Mounted frontend static files from E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\frontend at /ui"}
+{"timestamp": "2026-05-15T19:08:07.237622+00:00", "level": null, "name": "house_price_prediction", "message": "Loading models on startup"}
+{"timestamp": "2026-05-15T19:08:07.238429+00:00", "level": null, "name": "house_price_prediction", "message": "Error loading model: [Errno 2] No such file or directory: 'E:\\\\ProjectsGithub\\\\Data Science Internship\\\\Task-4-Full-DS-Project\\\\models\\\\house_price_model.pkl'"}
+{"timestamp": "2026-05-15T19:08:07.238556+00:00", "level": null, "name": "house_price_prediction", "message": "Model not found at E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\house_price_model.pkl"}
+{"timestamp": "2026-05-15T19:08:08.086090+00:00", "level": null, "name": "house_price_prediction", "message": "Model loaded successfully from E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\best_model.pkl"}
+{"timestamp": "2026-05-15T19:08:08.086587+00:00", "level": null, "name": "house_price_prediction", "message": "Loaded model from E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\best_model.pkl"}
+{"timestamp": "2026-05-15T19:08:11.418462+00:00", "level": null, "name": "house_price_prediction", "message": "Model loaded successfully from E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\preprocessor.pkl"}
+{"timestamp": "2026-05-15T19:08:11.418944+00:00", "level": null, "name": "house_price_prediction", "message": "Tried model paths: ['E:\\\\ProjectsGithub\\\\Data Science Internship\\\\Task-4-Full-DS-Project\\\\models\\\\house_price_model.pkl', 'E:\\\\ProjectsGithub\\\\Data Science Internship\\\\Task-4-Full-DS-Project\\\\models\\\\best_model.pkl']"}
+{"timestamp": "2026-05-15T19:08:11.419220+00:00", "level": null, "name": "house_price_prediction", "message": "Models loaded successfully"}
+{"timestamp": "2026-05-15T19:08:11.419396+00:00", "level": null, "name": "house_price_prediction", "message": "FastAPI application started"}
+{"timestamp": "2026-05-15T19:08:51.276188+00:00", "level": null, "name": "house_price_prediction", "message": "Transforming new data with fitted preprocessor"}
+{"timestamp": "2026-05-15T19:08:51.279183+00:00", "level": null, "name": "house_price_prediction", "message": "Missing values handled successfully"}
+{"timestamp": "2026-05-15T19:08:51.299445+00:00", "level": null, "name": "house_price_prediction", "message": "Created 15 features through feature engineering"}
+{"timestamp": "2026-05-15T19:08:51.310875+00:00", "level": null, "name": "house_price_prediction", "message": "Features scaled using standard scaler"}
+{"timestamp": "2026-05-15T19:08:51.312888+00:00", "level": null, "name": "house_price_prediction", "message": "Data transformed successfully to shape (1, 15)"}
+{"timestamp": "2026-05-15T19:08:51.324159+00:00", "level": null, "name": "house_price_prediction", "message": "Prediction made: 500000.00"}
+{"timestamp": "2026-05-15T19:09:51.035543+00:00", "level": null, "name": "house_price_prediction", "message": "FastAPI application shutting down"}
+{"timestamp": "2026-05-15T19:09:55.488468+00:00", "level": null, "name": "house_price_prediction", "message": "Logging system initialized", "log_level": "INFO", "log_file": "E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\logs\\logs\\app.log", "debug_mode": false}
+{"timestamp": "2026-05-15T19:09:55.498496+00:00", "level": null, "name": "house_price_prediction", "message": "Mounted frontend static files from E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\frontend at /ui"}
+{"timestamp": "2026-05-15T19:09:55.579961+00:00", "level": null, "name": "house_price_prediction", "message": "Loading models on startup"}
+{"timestamp": "2026-05-15T19:09:55.580381+00:00", "level": null, "name": "house_price_prediction", "message": "Error loading model: [Errno 2] No such file or directory: 'E:\\\\ProjectsGithub\\\\Data Science Internship\\\\Task-4-Full-DS-Project\\\\models\\\\house_price_model.pkl'"}
+{"timestamp": "2026-05-15T19:09:55.580489+00:00", "level": null, "name": "house_price_prediction", "message": "Model not found at E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\house_price_model.pkl"}
+{"timestamp": "2026-05-15T19:09:56.268080+00:00", "level": null, "name": "house_price_prediction", "message": "Model loaded successfully from E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\best_model.pkl"}
+{"timestamp": "2026-05-15T19:09:56.268268+00:00", "level": null, "name": "house_price_prediction", "message": "Loaded model from E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\best_model.pkl"}
+{"timestamp": "2026-05-15T19:09:59.829414+00:00", "level": null, "name": "house_price_prediction", "message": "Model loaded successfully from E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\models\\preprocessor.pkl"}
+{"timestamp": "2026-05-15T19:09:59.829819+00:00", "level": null, "name": "house_price_prediction", "message": "Tried model paths: ['E:\\\\ProjectsGithub\\\\Data Science Internship\\\\Task-4-Full-DS-Project\\\\models\\\\house_price_model.pkl', 'E:\\\\ProjectsGithub\\\\Data Science Internship\\\\Task-4-Full-DS-Project\\\\models\\\\best_model.pkl']"}
+{"timestamp": "2026-05-15T19:09:59.829943+00:00", "level": null, "name": "house_price_prediction", "message": "Models loaded successfully"}
+{"timestamp": "2026-05-15T19:09:59.830039+00:00", "level": null, "name": "house_price_prediction", "message": "FastAPI application started"}
+{"timestamp": "2026-05-15T19:10:19.613475+00:00", "level": null, "name": "house_price_prediction", "message": "Transforming new data with fitted preprocessor"}
+{"timestamp": "2026-05-15T19:10:19.616467+00:00", "level": null, "name": "house_price_prediction", "message": "Missing values handled successfully"}
+{"timestamp": "2026-05-15T19:10:19.632066+00:00", "level": null, "name": "house_price_prediction", "message": "Created 15 features through feature engineering"}
+{"timestamp": "2026-05-15T19:10:19.639789+00:00", "level": null, "name": "house_price_prediction", "message": "Features scaled using standard scaler"}
+{"timestamp": "2026-05-15T19:10:19.640785+00:00", "level": null, "name": "house_price_prediction", "message": "Data transformed successfully to shape (1, 15)"}
+{"timestamp": "2026-05-15T19:10:19.645871+00:00", "level": null, "name": "house_price_prediction", "message": "Prediction made: 500000.00"}
+{"timestamp": "2026-05-15T19:11:23.501353+00:00", "level": null, "name": "house_price_prediction", "message": "Transforming new data with fitted preprocessor"}
+{"timestamp": "2026-05-15T19:11:23.503389+00:00", "level": null, "name": "house_price_prediction", "message": "Missing values handled successfully"}
+{"timestamp": "2026-05-15T19:11:23.517031+00:00", "level": null, "name": "house_price_prediction", "message": "Created 15 features through feature engineering"}
+{"timestamp": "2026-05-15T19:11:23.521824+00:00", "level": null, "name": "house_price_prediction", "message": "Features scaled using standard scaler"}
+{"timestamp": "2026-05-15T19:11:23.522680+00:00", "level": null, "name": "house_price_prediction", "message": "Data transformed successfully to shape (1, 15)"}
+{"timestamp": "2026-05-15T19:11:23.525448+00:00", "level": null, "name": "house_price_prediction", "message": "Prediction made: 482044.63"}
