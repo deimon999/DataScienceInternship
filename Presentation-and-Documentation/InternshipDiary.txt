@@ -64,3 +64,45 @@ I tested the complete Task 3 page and ensured that the image gallery, product de
 
 2nd May
 I finalized Task 3 and prepared the screenshots and presentation materials for submission.
+
+3rd May
+I began Task 4: a full data science project from data collection and preprocessing to model deployment. I scoped the project to include a training pipeline, an `AdvancedPreprocessor`, multiple model experiments, and a lightweight API/frontend for demonstration. To provide an immediate demo, I created a zero-dependency `INSTANT_DEMO.html` showing interactive predictions and ensemble controls while I scaffolded the full Python project.
+
+4th May
+Scaffolded the full project under `Task-4-Full-DS-Project/` with `src/`, `data/`, `models/`, and `frontend/`. Implemented `AdvancedPreprocessor` to handle imputation, scaling, outlier capping and basic feature engineering. Started the `ModelTrainer` class to manage model experiments.
+
+5th May
+Built synthetic data generator `data/generate_data.py` and validated the preprocessing pipeline on generated CSVs. Implemented pipeline steps for encoding categorical `condition`, imputing missing values, and saving a `preprocessor.pkl` artifact.
+
+6th May
+Ran initial training runs with multiple algorithms (XGBoost, LightGBM, CatBoost, RandomForest). Encountered scaler `NotFittedError` and fixed scaler lifecycle in `AdvancedPreprocessor.scale_features`. Logged training outputs and model artifacts.
+
+7th May
+Resolved model parameter conflicts (duplicate `random_state`) and added an ordinal mapping for `condition` to avoid downstream type errors. Re-ran training and improved cross-validation stability.
+
+8th May
+Saved multiple model artifacts to `models/` and added debug loaders (`debug_load_model.py`, `debug_load_preprocessor.py`). Verified models and preprocessor unpickle correctly in isolation.
+
+9th May
+Implemented a FastAPI app (`src/api.py`) providing `/predict`, `/batch-predict`, `/health`, and `/model-info` endpoints with Pydantic validation and CORS enabled. Added utility functions for loading artifacts and evaluating requests.
+
+10th May
+Created `INSTANT_DEMO.html` as a zero-dependency interactive demo allowing instant predictions and ensemble-style sliders for model weights. This served as a fast proof-of-concept while the API matured.
+
+11th May
+Built the full frontend under `frontend/` (index, script, styles) and added features: batch CSV upload, model-info view, recent predictions and analytics placeholders. Configured the frontend to call the running API for live predictions.
+
+12th May
+Addressed pickling/module-name mismatch by adding a temporary top-level shim to support older preprocessor pickle expectations; retrained and re-saved the preprocessor using the `src` package so the shim could be removed later.
+
+13th May
+Removed compatibility shims after re-pickling artifacts under `src` module paths. Fixed package-relative imports and ensured the running Uvicorn process could load both model and preprocessor successfully.
+
+14th May
+Added INR (Bangalore) display support in the frontend with Indian numbering formatting and a toggle (set to default ON). Ensured displayed prices, ranges and batch summaries show in `₹` when selected.
+
+15th May
+Completed end-to-end verification: `/predict` and `/health` responded correctly, frontend served at `/ui/`. Committed `Task-4-Full-DS-Project/` and pushed to GitHub on branch `task-4`, and prepared PR instructions.
+
+16th May
+Finalized documentation and quickstart files (`README.md`, `GETTING_STARTED.md`, `DEPLOYMENT.md`), added a `Dockerfile` and `docker-compose.yml` for containerized deployment scaffolding, and updated logs and project summary.

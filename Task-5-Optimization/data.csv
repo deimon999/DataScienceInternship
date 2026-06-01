@@ -1,0 +1,4 @@
+product,profit_per_unit,resource_A,resource_B,max_demand,emission_per_unit
+Alpha,30,3,2,100,4
+Beta,20,2,4,80,3
+Gamma,25,4,1,60,2

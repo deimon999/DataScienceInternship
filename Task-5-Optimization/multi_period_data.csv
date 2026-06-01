@@ -1,0 +1,4 @@
+product,profit_per_unit,resource_A,resource_B,setup_cost,holding_cost,emission_per_unit,demand_t0,demand_t1,demand_t2
+Alpha,30,3,2,200,1,4,40,60,50
+Beta,20,2,4,150,0.8,3,30,40,20
+Gamma,25,4,1,180,0.5,2,20,10,30
