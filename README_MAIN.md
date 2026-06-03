@@ -2,12 +2,15 @@
 
 ## 📋 Project Overview
 
-This repository contains all deliverables from the **8-week Data Science & Web Development Internship** at **CodTech IT Solutions** (April 1 - May 2, 2026).
+This repository contains deliverables from the **8-week Data Science, Web Development, and Optimization Internship** at **CodTech IT Solutions** (April 1 - May 2, 2026).
 
-The internship covered three major projects spanning:
-- **Data Science & Machine Learning** (Tasks 1-2)
+The internship now includes five major projects spanning:
+- **ETL / Data Engineering** (Task 1)
+- **Deep Learning** (Task 2)
 - **Modern Web Development** (Task 3)
-- **Professional Presentation Skills**
+- **Full-stack Data Science / MLOps** (Task 4)
+- **Optimization / Operations Research** (Task 5)
+- **Professional Presentation & Documentation**
 
 ## 🎯 Project Goals
 
@@ -35,10 +38,23 @@ DataScienceInternship/
 │   ├── README.md                 # Task 3 documentation
 │   └── product_page.html         # Interactive product page
 │
+├── Task-4-Full-DS-Project/
+│   ├── src/                      # FastAPI, preprocessing, model training
+│   ├── frontend/                 # Dashboard UI
+│   ├── tests/                    # API and core tests
+│   └── README.md                 # Task 4 documentation
+│
+├── Task-5-Optimization/
+│   ├── optimization.py           # Linear programming / scenario analysis
+│   ├── results/                  # Scenario outputs and charts
+│   └── README.md                 # Task 5 documentation
+│
 ├── Presentation-and-Documentation/
 │   ├── README.md                 # Documentation folder guide
 │   ├── CODTECH_INTERNSHIP_PRESENTATION_FINAL_WITH_TASK1_TASK2_SS.pptx
 │   └── Additional presentation materials
+│
+├── PROJECT_AUDIT_AND_ROADMAP.md  # Cross-project review and improvement plan
 │
 ├── README.md                      # This file
 └── requirements.txt               # Main dependencies file
@@ -123,10 +139,10 @@ DataScienceInternship/
 | Metric | Value |
 |--------|-------|
 | **Internship Duration** | 8 weeks (April 1 - May 2, 2026) |
-| **Total Tasks** | 3 |
+| **Total Tasks** | 5 |
 | **Working Days** | 22 (excluding Sundays) |
-| **Code Files** | 3 (Python + HTML) |
-| **Documentation Files** | 4 README files |
+| **Code Files** | 20+ Python / HTML / JS files |
+| **Documentation Files** | 10+ README / report files |
 | **Total Code Lines** | 1000+ |
 | **Technologies Learned** | 10+ |
 
@@ -235,10 +251,13 @@ All code is provided for educational purposes.
 - [Task 1 - ETL Pipeline](Task-1-ETL-Pipeline/README.md)
 - [Task 2 - Deep Learning](Task-2-Deep-Learning/README.md)
 - [Task 3 - Product Page](Task-3-E-Commerce-Product-Page/README.md)
+- [Task 4 - Full DS Project](Task-4-Full-DS-Project/README.md)
+- [Task 5 - Optimization](Task-5-Optimization/README.md)
 - [Presentation & Documentation](Presentation-and-Documentation/README.md)
+- [Project Audit & Roadmap](PROJECT_AUDIT_AND_ROADMAP.md)
 
 ---
 
-**Last Updated:** May 4, 2026  
+**Last Updated:** June 3, 2026  
 **Repository Owner:** Data Science Internship  
 **GitHub:** https://github.com/deimon999/DataScienceInternship
