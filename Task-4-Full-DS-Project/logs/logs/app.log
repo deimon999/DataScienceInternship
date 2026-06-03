@@ -810,3 +810,4 @@
 {"timestamp": "2026-05-16T03:27:52.739115+00:00", "level": null, "name": "house_price_prediction", "message": "Tried model paths: ['E:\\\\ProjectsGithub\\\\Data Science Internship\\\\Task-4-Full-DS-Project\\\\models\\\\house_price_model.pkl', 'E:\\\\ProjectsGithub\\\\Data Science Internship\\\\Task-4-Full-DS-Project\\\\models\\\\best_model.pkl']"}
 {"timestamp": "2026-05-16T03:27:52.739216+00:00", "level": null, "name": "house_price_prediction", "message": "Models loaded successfully"}
 {"timestamp": "2026-05-16T03:27:52.739298+00:00", "level": null, "name": "house_price_prediction", "message": "FastAPI application started"}
+{"timestamp": "2026-06-03T05:35:28.183876+00:00", "level": null, "name": "house_price_prediction", "message": "Logging system initialized", "log_level": "INFO", "log_file": "E:\\ProjectsGithub\\Data Science Internship\\Task-4-Full-DS-Project\\logs\\logs\\app.log", "debug_mode": false}
